@@ -58,23 +58,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TBI\\.nuget\\packages\\": {},
+    "C:\\Users\\barte\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+      "projectUniqueName": "C:\\MOJE\\Projects\\WPF\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
       "projectName": "WpfTaskManager",
-      "projectPath": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
-      "packagesPath": "C:\\Users\\TBI\\.nuget\\packages\\",
-      "outputPath": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\obj\\",
+      "projectPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+      "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
+      "outputPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\WpfTaskManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\TBI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\barte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -83,15 +83,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Library.csproj": {
-              "projectPath": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Library.csproj"
+            "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\Library.csproj": {
+              "projectPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\Library.csproj"
             }
           }
         }
@@ -105,7 +104,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -129,7 +129,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

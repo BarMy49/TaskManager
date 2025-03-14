@@ -27,7 +27,10 @@
           "Figgle": "0.5.1"
         },
         "runtime": {
-          "Library.dll": {}
+          "Library.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
