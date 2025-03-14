@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "Title": "Nauka ZTP",
+    "Description": "Kolos ZTP",
+    "IsCompleted": false,
+    "Category": "Nauka",
+    "Priority": "High",
+    "DueDate": "2025-01-25T00:00:00"
+  },
+  {
+    "Id": 2,
+    "Title": "Elden Ring",
+    "Description": "",
+    "IsCompleted": true,
+    "Category": "Gry",
+    "Priority": "Low",
+    "DueDate": null
+  },
+  {
+    "Id": 3,
+    "Title": "Projekt AK",
+    "Description": "Zr\u00F3b projekt na Architektur\u0119 Komputer\u00F3w",
+    "IsCompleted": false,
+    "Category": "Projekty",
+    "Priority": "High",
+    "DueDate": "2025-01-30T00:00:00"
+  },
+  {
+    "Id": 4,
+    "Title": "Nauka Bazy ",
+    "Description": "Kolos Bazy",
+    "IsCompleted": false,
+    "Category": "Nauka",
+    "Priority": "Medium",
+    "DueDate": "2025-02-01T00:00:00"
+  },
+  {
+    "Id": 5,
+    "Title": "Figma",
+    "Description": "Odda\u0107 projekt Figma",
+    "IsCompleted": false,
+    "Category": "Projekty",
+    "Priority": "Low",
+    "DueDate": "2025-01-28T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Title": "Zer\u00F3wka Mobilki",
+    "Description": "Przyjd\u017A na zaliczenie z Mobilek",
+    "IsCompleted": false,
+    "Category": "Egzamin",
+    "Priority": "High",
+    "DueDate": "2025-01-29T00:00:00"
+  },
+  {
+    "Id": 7,
+    "Title": "Ghost of Tsushima",
+    "Description": "Zr\u00F3b platyne wreszcie",
+    "IsCompleted": false,
+    "Category": "Gry",
+    "Priority": "Low",
+    "DueDate": null
+  },
+  {
+    "Id": 8,
+    "Title": "Zer\u00F3wka Bazy",
+    "Description": "Id\u017A na bazy!",
+    "IsCompleted": false,
+    "Category": "Egzamin",
+    "Priority": "High",
+    "DueDate": "2025-01-31T00:00:00"
+  },
+  {
+    "Id": 9,
+    "Title": "Urodziny",
+    "Description": "Zapro\u015B Karine na Urodziny",
+    "IsCompleted": false,
+    "Category": "Urodziny",
+    "Priority": "Medium",
+    "DueDate": "2025-01-27T00:00:00"
+  },
+  {
+    "Id": 10,
+    "Title": "Drwal",
+    "Description": "Ostatni Drwal!!!",
+    "IsCompleted": false,
+    "Category": "Jedzenie",
+    "Priority": "High",
+    "DueDate": "2025-01-22T00:00:00"
+  }
+]

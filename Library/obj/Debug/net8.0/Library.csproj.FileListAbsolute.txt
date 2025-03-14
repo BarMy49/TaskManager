@@ -1,0 +1,84 @@
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\bin\Debug\net8.0\Library.deps.json
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\bin\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\bin\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\refint\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY\Library\obj\Debug\net8.0\ref\Library.dll
+C:\S. KCK\Graficzny\Library\bin\Debug\net8.0\Library.deps.json
+C:\S. KCK\Graficzny\Library\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\Library\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\refint\Library.dll
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\Library\obj\Debug\net8.0\ref\Library.dll
+C:\S. KCK\Graficzny\WPF\Library\bin\Debug\net8.0\Library.deps.json
+C:\S. KCK\Graficzny\WPF\Library\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\WPF\Library\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\refint\Library.dll
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\WPF\Library\obj\Debug\net8.0\ref\Library.dll
+C:\S. KCK\Graficzny\TaskManager\Library\bin\Debug\net8.0\Library.deps.json
+C:\S. KCK\Graficzny\TaskManager\Library\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\TaskManager\Library\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\refint\Library.dll
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\TaskManager\Library\obj\Debug\net8.0\ref\Library.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\bin\Debug\net8.0\Library.deps.json
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\bin\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\bin\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\refint\Library.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Library\obj\Debug\net8.0\ref\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\bin\Debug\net8.0\Library.deps.json
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\bin\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\bin\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\refint\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Library\obj\Debug\net8.0\ref\Library.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\bin\Debug\net8.0\Library.deps.json
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\Library.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\Library.AssemblyInfo.cs
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\Library.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\refint\Library.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny Poprawa\TaskManager\Library\obj\Debug\net8.0\ref\Library.dll

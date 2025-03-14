@@ -1,0 +1,181 @@
+D:\Politechnika Białostocka KCK\TaskManager\bin\Debug\net8.0\TaskManager.exe
+D:\Politechnika Białostocka KCK\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+D:\Politechnika Białostocka KCK\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+D:\Politechnika Białostocka KCK\TaskManager\bin\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+D:\Politechnika Białostocka KCK\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.exe
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.dll
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.dll
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\Figgle.dll
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+C:\Users\karin\OneDrive\Pulpit\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.exe
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.dll
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\bin\Debug\net8.0\Figgle.dll
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.dll
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+C:\S. KCK\TaskManager 18.11.2024 10.40\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\TaskManager.exe
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\Figgle.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY\TaskManager\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\TaskManager.exe
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\Figgle.dll
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\TaskManager\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+C:\S. KCK\Graficzny\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\TaskManager.exe
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\Figgle.dll
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\WPF\TaskManager\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+C:\S. KCK\Graficzny\WPF\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.exe
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\Figgle.dll
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny\TaskManager\TaskManager\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+C:\S. KCK\Graficzny\TaskManager\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.exe
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\Figgle.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\bin\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.exe
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\Figgle.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\Library.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\bin\Debug\net8.0\Library.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.exe
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.deps.json
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.runtimeconfig.json
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\Figgle.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\Library.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\bin\Debug\net8.0\Library.pdb
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.AssemblyReference.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.AssemblyInfo.cs
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskMana.F3FB485A.Up2Date
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\refint\TaskManager.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.pdb
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\TaskManager.genruntimeconfig.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\TaskManager\obj\Debug\net8.0\ref\TaskManager.dll

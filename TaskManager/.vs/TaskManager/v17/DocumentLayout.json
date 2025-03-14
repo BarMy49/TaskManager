@@ -1,0 +1,631 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\TaskManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BC50C7A1-9734-4D77-9A14-3DD921ECC56F}|..\\WpfTaskManager\\WpfTaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\wpftaskmanager\\wpfview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC50C7A1-9734-4D77-9A14-3DD921ECC56F}|..\\WpfTaskManager\\WpfTaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\wpftaskmanager\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC50C7A1-9734-4D77-9A14-3DD921ECC56F}|..\\WpfTaskManager\\WpfTaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\wpftaskmanager\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC50C7A1-9734-4D77-9A14-3DD921ECC56F}|..\\WpfTaskManager\\WpfTaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\wpftaskmanager\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC50C7A1-9734-4D77-9A14-3DD921ECC56F}|..\\WpfTaskManager\\WpfTaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\wpftaskmanager\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC50C7A1-9734-4D77-9A14-3DD921ECC56F}|..\\WpfTaskManager\\WpfTaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\wpftaskmanager\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC50C7A1-9734-4D77-9A14-3DD921ECC56F}|..\\WpfTaskManager\\WpfTaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\wpftaskmanager\\converters\\booltostatusconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E5A093B-3F5A-4D05-99F6-6825F685ACF4}|..\\Launcher\\Launcher.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\launcher\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD38397A-E3F8-4CCB-AD8A-B48BE9369CD6}|TaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\taskmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD38397A-E3F8-4CCB-AD8A-B48BE9369CD6}|TaskManager.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD38397A-E3F8-4CCB-AD8A-B48BE9369CD6}|TaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\taskmanager\\consoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD38397A-E3F8-4CCB-AD8A-B48BE9369CD6}|TaskManager.csproj|solutionrelative:consoleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA7811D-836F-46D3-A0A3-10F31248512A}|..\\Library\\Library.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\library\\iview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA7811D-836F-46D3-A0A3-10F31248512A}|..\\Library\\Library.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\library\\model\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA7811D-836F-46D3-A0A3-10F31248512A}|..\\Library\\Library.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\library\\model\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA7811D-836F-46D3-A0A3-10F31248512A}|..\\Library\\Library.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\library\\controller\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Launcher\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Visual Studio Enterprise 2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD38397A-E3F8-4CCB-AD8A-B48BE9369CD6}|TaskManager.csproj|c:\\s. kck\\graficzny poprawa\\taskmanager\\taskmanager\\taskmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AD38397A-E3F8-4CCB-AD8A-B48BE9369CD6}|TaskManager.csproj|solutionrelative:taskmanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Launcher\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TBI\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\WpfView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Model\\TaskRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Launcher\\Launcher.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Controller\\TaskController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Model\\TaskModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Library\\IView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Library\\Controller\\TaskController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\WpfView.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\App.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "..\\WpfTaskManager\\MainWindow.xaml",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "RelativeToolTip": "..\\WpfTaskManager\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-24T13:04:36.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BoolToStatusConverter.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "RelativeDocumentMoniker": "..\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "RelativeToolTip": "..\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T13:02:41.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\App.xaml",
+              "RelativeDocumentMoniker": "..\\WpfTaskManager\\App.xaml",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\App.xaml",
+              "RelativeToolTip": "..\\WpfTaskManager\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-24T13:03:17.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IView.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\IView.cs",
+              "RelativeDocumentMoniker": "..\\Library\\IView.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\IView.cs",
+              "RelativeToolTip": "..\\Library\\IView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T12:53:18.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConsoleView.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\TaskManager\\ConsoleView.cs",
+              "RelativeDocumentMoniker": "ConsoleView.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\TaskManager\\ConsoleView.cs",
+              "RelativeToolTip": "ConsoleView.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAmwCQBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:48:04.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\TaskManager\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\TaskManager\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T16:05:52.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Launcher\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Launcher\\Program.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Launcher\\Program.cs",
+              "RelativeToolTip": "..\\Launcher\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T12:42:07.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "RelativeDocumentMoniker": "..\\WpfTaskManager\\App.xaml.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "RelativeToolTip": "..\\WpfTaskManager\\App.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T13:03:53.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "..\\WpfTaskManager\\AssemblyInfo.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "RelativeToolTip": "..\\WpfTaskManager\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T13:04:24.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "..\\WpfTaskManager\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "RelativeToolTip": "..\\WpfTaskManager\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAYBAAAAAAAAAAAswBsBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T13:05:31.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WpfView.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\WpfView.cs",
+              "RelativeDocumentMoniker": "..\\WpfTaskManager\\WpfView.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\WpfView.cs",
+              "RelativeToolTip": "..\\WpfTaskManager\\WpfView.cs",
+              "ViewState": "AQIAAAIBAAAAAAAAAAAuwEwBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T13:05:43.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Model\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "..\\Library\\Model\\TaskRepository.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Model\\TaskRepository.cs",
+              "RelativeToolTip": "..\\Library\\Model\\TaskRepository.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAcwKwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T12:58:57.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Model\\TaskModel.cs",
+              "RelativeDocumentMoniker": "..\\Library\\Model\\TaskModel.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Model\\TaskModel.cs",
+              "RelativeToolTip": "..\\Library\\Model\\TaskModel.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAiwCwAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T12:58:03.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Controller\\TaskController.cs",
+              "RelativeDocumentMoniker": "..\\Library\\Controller\\TaskController.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\Library\\Controller\\TaskController.cs",
+              "RelativeToolTip": "..\\Library\\Controller\\TaskController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T12:57:12.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IView.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Library\\IView.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Library\\IView.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAYwBAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:19:31.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Library\\Controller\\TaskController.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Library\\Controller\\TaskController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:52:55.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAQwDEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:51:53.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-16T15:27:44.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "WpfView.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\WpfView.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\WpfView.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAA2wAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:49:36.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T21:41:05.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Launcher\\Program.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\Launcher\\Program.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:13:00.554Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\App.xaml",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-16T21:41:02.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "D:\\Visual Studio Enterprise 2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "D:\\Visual Studio Enterprise 2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAFcTAAAAAAAAAAApwGYTAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-12-16T16:26:29.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "BoolToStatusConverter.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\OSTATECZNY GRAFIKA\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T15:26:55.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TaskManager.csproj",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\TaskManager\\TaskManager.csproj",
+              "RelativeDocumentMoniker": "TaskManager.csproj",
+              "ToolTip": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\TaskManager\\TaskManager.csproj",
+              "RelativeToolTip": "TaskManager.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-16T15:12:38.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "WpfView.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\WpfView.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\WpfView.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAnwHUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:32:07.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Model\\TaskRepository.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Model\\TaskRepository.cs",
+              "ViewState": "AQIAAHwAAAAAAAAAAAArwI4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T17:03:24.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Launcher.csproj",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Launcher\\Launcher.csproj",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Launcher\\Launcher.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-10T15:41:38.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAiwBcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:33:05.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\App.xaml",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T15:33:12.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Launcher\\Program.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Launcher\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:36:47.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAkwCoAAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:32:48.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T15:32:42.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Controller\\TaskController.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Controller\\TaskController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAgwEEAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:52:31.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Model\\TaskModel.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\Library\\Model\\TaskModel.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAArwE4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T17:54:14.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "BoolToStatusConverter.cs",
+              "DocumentMoniker": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ToolTip": "D:\\Politechnika Bia\u0142ostocka KCK\\SM\\TaskManagerGrafika 10.12.2024 15-48\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:31:09.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "XamlReader.cs",
+              "DocumentMoniker": "C:\\Users\\TBI\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Users\\TBI\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs",
+              "ToolTip": "C:\\Users\\TBI\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\Users\\TBI\\AppData\\Local\\Temp\\.vsdbgsrc\\0a84cc53936b314ba955b54f50bf4796d8234943f3fd7b93873381b45d404026\\XamlReader.cs [Read Only]",
+              "ViewState": "AQIAAKwBAAAAAAAAAAAjwLUBAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:14:10.304Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "RelativeToolTip": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:45:20.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "RelativeToolTip": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:44:08.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "RelativeToolTip": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:43:57.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml",
+              "RelativeDocumentMoniker": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml",
+              "ToolTip": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml",
+              "RelativeToolTip": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T14:43:42.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BoolToStatusConverter.cs",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ToolTip": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "RelativeToolTip": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\Converters\\BoolToStatusConverter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:41:43.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "ToolTip": "C:\\S. KCK\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "RelativeToolTip": "..\\..\\..\\Graficzny\\TaskManager\\WpfTaskManager\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-10T14:41:15.25Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

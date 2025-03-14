@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BP9qBpx/pAJoTSWM+D0G7L9jZU+H7SbUd7AtIDFOWeXYVuGOiE6Z5Z/DeOL0z8D2u2HAEnBI8+n/3yQBoNaqaQ==",
+  "success": true,
+  "projectFilePath": "C:\\S. KCK\\Graficzny Poprawa\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TBI\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

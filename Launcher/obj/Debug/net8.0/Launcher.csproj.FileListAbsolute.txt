@@ -1,0 +1,42 @@
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\bin\Debug\net8.0\Launcher.exe
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\bin\Debug\net8.0\Launcher.deps.json
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\bin\Debug\net8.0\Launcher.runtimeconfig.json
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\bin\Debug\net8.0\Launcher.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\bin\Debug\net8.0\Launcher.pdb
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\Launcher.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\Launcher.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\Launcher.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\Launcher.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\Launcher.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\refint\Launcher.dll
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\Launcher.pdb
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\Launcher.genruntimeconfig.cache
+D:\Politechnika Białostocka KCK\SM\TaskManagerGrafika 10.12.2024 15-48\TaskManager\Launcher\obj\Debug\net8.0\ref\Launcher.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\bin\Debug\net8.0\Launcher.exe
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\bin\Debug\net8.0\Launcher.deps.json
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\bin\Debug\net8.0\Launcher.runtimeconfig.json
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\bin\Debug\net8.0\Launcher.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\bin\Debug\net8.0\Launcher.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\Launcher.GeneratedMSBuildEditorConfig.editorconfig
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\Launcher.AssemblyInfoInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\Launcher.AssemblyInfo.cs
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\Launcher.csproj.CoreCompileInputs.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\Launcher.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\refint\Launcher.dll
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\Launcher.pdb
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\Launcher.genruntimeconfig.cache
+D:\Politechnika Białostocka KCK\OSTATECZNY GRAFIKA\TaskManager\Launcher\obj\Debug\net8.0\ref\Launcher.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\bin\Debug\net8.0\Launcher.exe
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\bin\Debug\net8.0\Launcher.deps.json
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\bin\Debug\net8.0\Launcher.runtimeconfig.json
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\bin\Debug\net8.0\Launcher.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\bin\Debug\net8.0\Launcher.pdb
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\Launcher.GeneratedMSBuildEditorConfig.editorconfig
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\Launcher.AssemblyInfoInputs.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\Launcher.AssemblyInfo.cs
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\Launcher.csproj.CoreCompileInputs.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\Launcher.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\refint\Launcher.dll
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\Launcher.pdb
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\Launcher.genruntimeconfig.cache
+C:\S. KCK\Graficzny Poprawa\TaskManager\Launcher\obj\Debug\net8.0\ref\Launcher.dll
