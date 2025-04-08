@@ -1,6 +1,5 @@
 # TODO
 - zmienić due date na kalendarz
-- zmienić wybieranie priority na <select>
 - dodać zaznaczanie zadań i obsługę usuwania i edytowania za pomocą tego
 - dynamiczna zmiana widoku (jeżeli zaznaczone 1 to można zrobić wszystko, jeżeli więcej to nie można edytować np.)
 - dodać sortowanie po terminie
@@ -13,3 +12,4 @@
 - instalator
 - Dodanie API Outlook calendar (optional)
 - konwertowanie listy zadań na pdf
+- zmienić wybieranie priority na <select>
