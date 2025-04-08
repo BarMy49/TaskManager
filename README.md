@@ -12,4 +12,4 @@
 - instalator
 - Dodanie API Outlook calendar (optional)
 - konwertowanie listy zadań na pdf
-- zmienić wybieranie priority na <select>
+- zmienić wybieranie priority na {select}
