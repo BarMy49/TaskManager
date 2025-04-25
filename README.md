@@ -1,15 +1,16 @@
 # TODO
-- zmienić wybieranie priority na {select}
-- zmienić due date na kalendarz
-- dodać zaznaczanie zadań i obsługę usuwania i edytowania za pomocą tego
-- dynamiczna zmiana widoku (jeżeli zaznaczone 1 to można zrobić wszystko, jeżeli więcej to nie można edytować np.)
-- dodać sortowanie po terminie
-- jeżeli zadanie jest nie zostało zakończone w terminie to staje się czerwone
-- jeżeli jest bliskie końcowi wykonania to pomarańczowy (or smthn)
-- grafika wektorowa (jeżeli grafikowi by się chciało)
-- animacje można pododawać
-- Lokalizacja (wersje językowe)
-- powiadomienia w tle, ikona w trayu
-- instalator
-- Dodanie API Outlook calendar (optional)
+- Dodanie bazy danych json **Bartosz**
+- Lokalizacja (wersje językowe) **Bartosz**
+- zmienić wybieranie priority na {select} **Bartosz**
+- Dodanie API Outlook calendar (optional) **Bartosz**
+- zmienić due date na kalendarz **Adrian**
+- dodać zaznaczanie zadań i obsługę usuwania i edytowania za pomocą tego **Adrian**
+- dynamiczna zmiana widoku (jeżeli zaznaczone 1 to można zrobić wszystko, jeżeli więcej to nie można edytować np.) **Adrian**
+- dodać sortowanie po terminie **Adrian**
+- jeżeli zadanie jest nie zostało zakończone w terminie to staje się czerwone **Adrian**
+- jeżeli jest bliskie końcowi wykonania to pomarańczowy (or smthn) **Adrian**
+- grafika wektorowa (jeżeli grafikowi by się chciało) **Adrian**
+- animacje można pododawać **Adrian**
+- powiadomienia w tle, ikona w trayu **Adrian**
 - konwertowanie listy zadań na pdf
+- instalator 
