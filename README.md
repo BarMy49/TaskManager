@@ -1,5 +1,4 @@
 # TODO
-- Dodanie bazy danych json **Bartosz**
 - Lokalizacja (wersje językowe) **Bartosz**
 - zmienić wybieranie priority na {select} **Bartosz**
 - Dodanie API Outlook calendar (optional) **Bartosz**
