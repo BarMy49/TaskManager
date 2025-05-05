@@ -1,5 +1,4 @@
 # TODO
-- Lokalizacja (wersje językowe) **Bartosz**
 - zmienić wybieranie priority na {select} **Bartosz**
 - Dodanie API Outlook calendar (optional) **Bartosz**
 - zmienić due date na kalendarz **Adrian**
