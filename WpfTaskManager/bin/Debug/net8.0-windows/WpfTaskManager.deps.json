@@ -12,6 +12,11 @@
         },
         "runtime": {
           "WpfTaskManager.dll": {}
+        },
+        "resources": {
+          "pl/WpfTaskManager.resources.dll": {
+            "locale": "pl"
+          }
         }
       },
       "Figgle/0.5.1": {
@@ -28,7 +33,7 @@
         },
         "runtime": {
           "Library.dll": {
-            "assemblyVersion": "1.0.0.0",
+            "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }

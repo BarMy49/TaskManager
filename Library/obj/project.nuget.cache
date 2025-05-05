@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K4GUw6HgAE8=",
+  "dgSpecHash": "FEZgXIXLHQY=",
   "success": true,
-  "projectFilePath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\Library.csproj",
+  "projectFilePath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barte\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
   ],

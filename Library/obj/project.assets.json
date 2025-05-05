@@ -46,11 +46,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\Library.csproj",
+      "projectUniqueName": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj",
       "projectName": "Library",
-      "projectPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\Library.csproj",
+      "projectPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj",
       "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
-      "outputPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\obj\\",
+      "outputPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,6 +65,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "c:\\program files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -81,9 +82,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -110,7 +111,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

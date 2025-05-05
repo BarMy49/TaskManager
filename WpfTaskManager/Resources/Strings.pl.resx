@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- Istniejące klucze -->
+  <data name="Menu_FilterTasks" xml:space="preserve">
+    <value>=== Filtrowanie zadań ===</value>
+  </data>
+  <data name="Menu_Navigation" xml:space="preserve">
+    <value>Użyj strzałek do nawigacji oraz Enter, aby wybrać opcję:</value>
+  </data>
+  <data name="Input_EnterCategory" xml:space="preserve">
+    <value>Wprowadź kategorię: </value>
+  </data>
+  <data name="Input_CompletionStatus" xml:space="preserve">
+    <value>Wprowadź status ukończenia (1 - Ukończone, 0 - Nieukończone): </value>
+  </data>
+  <data name="Input_InvalidChoice" xml:space="preserve">
+    <value>Nieprawidłowy wybór. Wprowadź 1 (Ukończone) lub 0 (Nieukończone): </value>
+  </data>
+  <data name="Input_EnterDate" xml:space="preserve">
+    <value>Wprowadź datę (dd-MM-yyyy): </value>
+  </data>
+  <data name="Input_InvalidDate" xml:space="preserve">
+    <value>Nieprawidłowy format daty. Wprowadź w formacie dd-MM-yyyy: </value>
+  </data>
+  <data name="Input_SearchKeyword" xml:space="preserve">
+    <value>Wprowadź słowo kluczowe do wyszukania: </value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  
+  <!-- Klucze z interfejsu MainWindow -->
+  <data name="Search" xml:space="preserve">
+    <value>Szukaj</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tytuł</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Opis</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategoria</value>
+  </data>
+  <data name="Priority" xml:space="preserve">
+    <value>Priorytet</value>
+  </data>
+  <data name="DueDate" xml:space="preserve">
+    <value>Termin</value>
+  </data>
+  <data name="PriorityField" xml:space="preserve">
+    <value>Priorytet</value>
+  </data>
+  <data name="DueDateField" xml:space="preserve">
+    <value>Termin (dd-MM-yyyy)</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="EnterDeleteId" xml:space="preserve">
+    <value>Podaj ID zadania do usunięcia</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="EnterToggleId" xml:space="preserve">
+    <value>Podaj ID zadania do zmiany statusu</value>
+  </data>
+  <data name="ChangeStatus" xml:space="preserve">
+    <value>Zmień status</value>
+  </data>
+  <data name="EnterEditId" xml:space="preserve">
+    <value>Podaj ID zadania do edycji</value>
+  </data>
+  <data name="SearchById" xml:space="preserve">
+    <value>Szukaj po ID</value>
+  </data>
+  <data name="SearchByCategory" xml:space="preserve">
+    <value>Szukaj po kategorii</value>
+  </data>
+  <data name="AllTasks" xml:space="preserve">
+    <value>Pokaż wszystkie zadania</value>
+  </data>
+  <data name="AddTask" xml:space="preserve">
+    <value>Dodaj nowe zadanie</value>
+  </data>
+  <data name="EditTask" xml:space="preserve">
+    <value>Edytuj zadanie</value>
+  </data>
+  <data name="DeleteTask" xml:space="preserve">
+    <value>Usuń zadanie</value>
+  </data>
+  <data name="ToggleTask" xml:space="preserve">
+    <value>Przełącz status zadania</value>
+  </data>
+  <data name="ListIncomplete" xml:space="preserve">
+    <value>Pokaż zadania nieukończone</value>
+  </data>
+  <data name="ListByPriority" xml:space="preserve">
+    <value>Sortuj zadania wg priorytetu</value>
+  </data>
+  <data name="FilterByCategory" xml:space="preserve">
+    <value>Filtruj po kategorii</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Wyjście</value>
+  </data>
+</root>

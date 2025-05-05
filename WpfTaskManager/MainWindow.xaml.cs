@@ -2,6 +2,7 @@
 using TaskManager.Controller;
 using TaskManager.View;
 using System.Windows.Input;
+using TaskManager.Localization;
 
 namespace WpfTaskManager
 {
@@ -9,14 +10,46 @@ namespace WpfTaskManager
     {
         private WpfView? view;
         private TaskController? controller;
+        private readonly ILocalizer _localizer;
 
-        public MainWindow() =>
+        public MainWindow(ILocalizer localizer)
+        {
             InitializeComponent();
+            _localizer = localizer;
+            
+            this.DataContext = this;
+            
+        }
 
         public void SetView(WpfView view, TaskController controller)
         {
             this.controller = controller;
             DataContext = this.view = view;
+        }
+        
+        public void RefreshColumnHeaders()
+        {
+            var loc = (ResourceLocalizer)_localizer;
+            // ID nie tłumaczymy
+            TasksGrid.Columns[1].Header = Application.Current.Resources["TitleText"];
+            TasksGrid.Columns[2].Header = Application.Current.Resources["DescriptionText"];
+            TasksGrid.Columns[3].Header = Application.Current.Resources["StatusText"];
+            TasksGrid.Columns[4].Header = Application.Current.Resources["CategoryText"];
+            TasksGrid.Columns[5].Header = Application.Current.Resources["PriorityText"];
+            TasksGrid.Columns[6].Header = Application.Current.Resources["DueDateText"];
+        }
+        
+        public void RefreshControllerBindings()
+        {
+            // Ponownie ustaw DataContext
+            DataContext = view;
+    
+            // Uaktualnij bindowania kontrolek
+            if (TasksGrid != null)
+            {
+                TasksGrid.ItemsSource = null;
+                TasksGrid.ItemsSource = view?.Records;
+            }
         }
 
         private void BtnUp_Click(object sender, RoutedEventArgs e)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Asy9KZLN7+0=",
+  "dgSpecHash": "WAIPWan2mhc=",
   "success": true,
-  "projectFilePath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+  "projectFilePath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barte\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
   ],

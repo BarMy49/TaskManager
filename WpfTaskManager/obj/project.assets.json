@@ -64,11 +64,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MOJE\\Projects\\WPF\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+      "projectUniqueName": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
       "projectName": "WpfTaskManager",
-      "projectPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+      "projectPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
       "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
-      "outputPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\WpfTaskManager\\obj\\",
+      "outputPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -83,14 +83,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\Library.csproj": {
-              "projectPath": "C:\\MOJE\\Projects\\WPF\\TaskManager\\Library\\Library.csproj"
+            "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj": {
+              "projectPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj"
             }
           }
         }
@@ -103,9 +104,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -129,7 +130,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

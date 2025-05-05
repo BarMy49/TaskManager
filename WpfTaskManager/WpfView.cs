@@ -1,6 +1,9 @@
 ﻿using Figgle;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using TaskManager.Localization;
 using TaskManager.Model;
 using WpfTaskManager;
 
@@ -8,6 +11,41 @@ namespace TaskManager.View
 {
     public class WpfView : IView, INotifyPropertyChanged
     {
+        private readonly ILocalizer _localizer;
+        
+        // Dodaj tę właściwość do wyboru języka
+        public List<string> AvailableLanguages { get; } = new List<string> { "pl", "en" };
+        
+        private string _selectedLanguage = "en";
+        public string SelectedLanguage
+        {
+            get => _selectedLanguage;
+            set
+            {
+                if (_selectedLanguage != value)
+                {
+                    _selectedLanguage = value;
+                    _localizer.SetLanguage(value);
+                    RefreshUI();
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedLanguage)));
+                }
+            }
+        }
+        
+        // Konstruktor z lokalizacją
+        public WpfView(ILocalizer localizer)
+        {
+            _localizer = localizer;
+            _selectedLanguage = _localizer.CurrentLanguage;
+        }
+        
+        // Odświeżanie UI po zmianie języka
+        private void RefreshUI()
+        {
+            // Wywołaj PropertyChanged dla wszystkich tekstów UI
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(string.Empty)); // Odświeża wszystko
+        }
+        
         // Widoczność głównej sekcji pól
         private Visibility _fieldsVisibility = Visibility.Collapsed;
         public Visibility FieldsVisibility
@@ -194,9 +232,9 @@ namespace TaskManager.View
         public void DisplayFilterMenu(string[] options, int selectedOption)
         {
             Clear();
-            Center("=== Filtrowanie zadań ===");
+            Center(_localizer.GetString("Menu_FilterTasks"));
             WriteLine();
-            Center("Użyj strzałek 🠕 i 🠗 do nawigacji oraz Enter, aby wybrać opcję:");
+            Center(_localizer.GetString("Menu_Navigation"));
             WriteLine();
 
             (int left, int top) = GetCursorPosition();
@@ -228,28 +266,29 @@ namespace TaskManager.View
             {
                 return CategoryFilterText;
             }
+            Write(_localizer.GetString("Input_EnterCategory"));
             return ReadLine();
         }
 
         public bool GetFilterCompletionStatus()
         {
             Clear();
-            Write("Wprowadź status ukończenia (1 - Ukończone, 0 - Nieukończone): ");
+            Write(_localizer.GetString("Input_CompletionStatus"));
             int val;
             while (!int.TryParse(ReadLine(), out val) || (val != 0 && val != 1))
             {
-                Write("Nieprawidłowy wybór. Wprowadź 1 (Ukończone) lub 0 (Nieukończone): ");
+                Write(_localizer.GetString("Input_InvalidChoice"));
             }
             return val == 1;
         }
 
         public DateTime GetFilterDate()
         {
-            Write("Wprowadź datę (dd-MM-yyyy): ");
+            Write(_localizer.GetString("Input_EnterDate"));
             DateTime date;
             while (!DateTime.TryParseExact(ReadLine(), "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out date))
             {
-                Write("Nieprawidłowy format daty. Wprowadź w formacie dd-MM-yyyy: ");
+                Write(_localizer.GetString("Input_InvalidDate"));
             }
             return date;
         }
@@ -312,7 +351,7 @@ namespace TaskManager.View
 
         public string GetSearchKeyword()
         {
-            Write("Wprowadź słowo kluczowe do wyszukania: ");
+            Write(_localizer.GetString("Input_SearchKeyword"));
             return ReadLine();
         }
 
