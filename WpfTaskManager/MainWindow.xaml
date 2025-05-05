@@ -129,7 +129,122 @@
 
         <!-- Dolna część -->
         <ScrollViewer Grid.Row="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <TextBlock Text="{Binding Text}" FontFamily="Consolas" FontSize="16" Margin="10" />
+            <StackPanel Orientation="Horizontal">
+                <!-- Panel z polami Title, Description, Category, Priority, DueDate -->
+                <StackPanel x:Name="MainFieldsPanel" Visibility="{Binding FieldsVisibility}" Orientation="Vertical">
+                    <UniformGrid Columns="2">
+                        <Label Content="{DynamicResource TitleText}"/>
+                        <TextBox Text="{Binding Title}" Width="200"/>
+
+                        <Label Content="{DynamicResource DescriptionText}"/>
+                        <TextBox Text="{Binding Description}" Width="200"/>
+
+                        <Label Content="{DynamicResource CategoryText}"/>
+                        <TextBox Text="{Binding Category}" Width="200"/>
+
+                        <Label>
+                            <TextBlock>
+                                <Run Text="{DynamicResource PriorityText}"/>
+                                <Run Text=" (Low, Medium, High)"/>
+                            </TextBlock>
+                        </Label>
+                        <TextBox Text="{Binding Priority}" Width="200"/>
+
+                        <Label>
+                            <TextBlock>
+                                <Run Text="{DynamicResource DueDateText}"/>
+                                <Run Text=" (Month/Day/Year)"/>
+                            </TextBlock>
+                        </Label>
+                        <TextBox Text="{Binding DueDate}" Width="200"/>
+                    </UniformGrid>
+
+                    <!-- Przycisk "Dodaj" -->
+                    <Button Content="{DynamicResource AddText}"
+                            Visibility="{Binding AddConfirmVisibility}"
+                            Click="AddConfirm_Click"/>
+
+                    <!-- Przycisk "Edytuj" (pod polami) -->
+                    <Button Content="{DynamicResource EditText}"
+                            Visibility="{Binding EditConfirmVisibility}"
+                            Click="EditConfirm_Click"/>
+                </StackPanel>
+
+                <!-- Grid z Borderami do: usuwania, togglowania, edycji ID, filtra kategorii -->
+                <Grid Margin="20,0,0,0" VerticalAlignment="Top" Width="300" Height="200">
+                    <!-- Border usuwania -->
+                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
+                            Visibility="{Binding DeleteVisibility}" Background="#ccffcc"
+                            Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource EnterDeleteIdText}"
+                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                            <TextBox Text="{Binding DeleteId, UpdateSourceTrigger=PropertyChanged}"
+                                     Background="#ccffcc"
+                                     Foreground="Black"
+                                     PreviewKeyDown="DeleteId_PreviewKeyDown"
+                                     Margin="5"/>
+                            <!-- Przycisk "Usuń" -->
+                            <Button Content="{DynamicResource DeleteText}"
+                                    Margin="5"
+                                    Click="DeleteIdButton_Click"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Border togglowania -->
+                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
+                            Visibility="{Binding ToggleVisibility}" Background="#ccffcc"
+                            Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource EnterToggleIdText}"
+                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                            <TextBox Text="{Binding ToggleId, UpdateSourceTrigger=PropertyChanged}"
+                                     Background="#ccffcc"
+                                     Foreground="Black"
+                                     PreviewKeyDown="ToggleId_PreviewKeyDown"
+                                     Margin="5"/>
+                            <!-- Przycisk "Zmień na Ukończone/Nieukończone" -->
+                            <Button Content="{DynamicResource ChangeStatusText}"
+                                    Margin="5"
+                                    Click="ToggleIdButton_Click"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Border edycji -->
+                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
+                            Visibility="{Binding EditVisibility}" Background="#ccffcc"
+                            Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource EnterEditIdText}"
+                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                            <TextBox Text="{Binding EditId, UpdateSourceTrigger=PropertyChanged}"
+                                     Background="#ccffcc"
+                                     Foreground="Black"
+                                     PreviewKeyDown="EditId_PreviewKeyDown"
+                                     Margin="5"/>
+                            <Button Content="{DynamicResource SearchByIdText}" Click="SearchById_Click" Margin="5"/>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Border do filtrowania po kategorii -->
+                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
+                            Visibility="{Binding CategoryFilterVisibility}" Background="#ccffcc"
+                            Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource SearchByCategoryText}"
+                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                            <TextBox Text="{Binding CategoryFilterText, UpdateSourceTrigger=PropertyChanged}"
+                                     Background="#ccffcc"
+                                     Foreground="Black"
+                                     PreviewKeyDown="CategoryFilterText_PreviewKeyDown"
+                                     Margin="5"/>
+                            <Button Content="{DynamicResource SearchText}"
+                                    Margin="5"
+                                    Click="CategoryFilterTextButton_Click"/>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </StackPanel>
         </ScrollViewer>
 
         <!-- Prawa kolumna - przyciski akcji -->

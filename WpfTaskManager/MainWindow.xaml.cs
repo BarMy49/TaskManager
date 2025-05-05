@@ -17,8 +17,6 @@ namespace WpfTaskManager
             InitializeComponent();
             _localizer = localizer;
             
-            this.DataContext = this;
-            
         }
 
         public void SetView(WpfView view, TaskController controller)
@@ -137,6 +135,7 @@ namespace WpfTaskManager
 
             view.Ignore = true;
         }
+        
         private void FilterTasksByCategory_Click(object sender, RoutedEventArgs e)
         {
             // Sneaky inne formularze

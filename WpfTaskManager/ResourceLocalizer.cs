@@ -25,7 +25,7 @@ namespace TaskManager.Localization
         public ResourceLocalizer()
         {
             _resourceManager = new ResourceManager("WpfTaskManager.Resources.Strings", Assembly.GetExecutingAssembly());
-            SetLanguage("en"); // Domyślnie polski
+            SetLanguage("en"); // Domyślnie angielski
         }
 
         public string GetString(string key)
