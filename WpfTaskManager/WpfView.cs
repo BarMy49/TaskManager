@@ -1,8 +1,7 @@
-﻿using Figgle;
+﻿using System.Collections.ObjectModel;
+using Figgle;
 using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
 using TaskManager.Localization;
 using TaskManager.Model;
 using WpfTaskManager;
@@ -141,6 +140,7 @@ namespace TaskManager.View
         public string? Description { get; set; }
         public bool IsCompleted { get; set; }
         public string? Category { get; set; }
+        public ObservableCollection<string> PriorityOptions { get; set; } = new ObservableCollection<string> { "Low", "Medium", "High" };
         public TaskPriority? Priority { get; set; }
         public DateTime? DueDate { get; set; }
 

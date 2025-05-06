@@ -145,20 +145,17 @@
                         <TextBox Text="{Binding Category}" Width="200"/>
 
                         <Label>
-                            <TextBlock>
-                                <Run Text="{DynamicResource PriorityText}"/>
-                                <Run Text=" (Low, Medium, High)"/>
-                            </TextBlock>
+                            <TextBlock Text="{DynamicResource PriorityText}"/>
                         </Label>
-                        <TextBox Text="{Binding Priority}" Width="200"/>
+                        <ComboBox
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                            ItemsSource="{Binding PriorityOptions}" SelectedItem="{Binding Priority}" Width="200"
+                            Margin="0,10,0,10"/>
 
                         <Label>
-                            <TextBlock>
-                                <Run Text="{DynamicResource DueDateText}"/>
-                                <Run Text=" (Month/Day/Year)"/>
-                            </TextBlock>
+                            <TextBlock Text="{DynamicResource DueDateText}"/>
                         </Label>
-                        <TextBox Text="{Binding DueDate}" Width="200"/>
+                        <DatePicker SelectedDate="{Binding DueDate}" Width="200" Margin="0,10,0,10"/>
                     </UniformGrid>
 
                     <!-- Przycisk "Dodaj" -->
