@@ -1,4 +1,5 @@
 # TODO
+- Theme Switcher **Bartosz**
 - Dodanie API Outlook calendar (optional) **Bartosz**
 - dodać zaznaczanie zadań i obsługę usuwania i edytowania za pomocą tego **Adrian**
 - dynamiczna zmiana widoku (jeżeli zaznaczone 1 to można zrobić wszystko, jeżeli więcej to nie można edytować np.) **Adrian**
