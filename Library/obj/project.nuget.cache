@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "FEZgXIXLHQY=",
+  "dgSpecHash": "kz0hrW6q82w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj",
+  "projectFilePath": "D:\\Stduai\\Sezon-6\\WuPeEfy\\TaskManager\\Library\\Library.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\barte\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
+    "C:\\Users\\minel\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
   ],
   "logs": []
 }

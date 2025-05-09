@@ -54,44 +54,37 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "Figgle >= 0.5.1",
       "Library >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\barte\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\minel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+      "projectUniqueName": "D:\\Stduai\\Sezon-6\\WuPeEfy\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
       "projectName": "WpfTaskManager",
-      "projectPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
-      "packagesPath": "C:\\Users\\barte\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\obj\\",
+      "projectPath": "D:\\Stduai\\Sezon-6\\WuPeEfy\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
+      "packagesPath": "C:\\Users\\minel\\.nuget\\packages\\",
+      "outputPath": "D:\\Stduai\\Sezon-6\\WuPeEfy\\TaskManager\\WpfTaskManager\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\barte\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\minel\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj": {
-              "projectPath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\Library\\Library.csproj"
+            "D:\\Stduai\\Sezon-6\\WuPeEfy\\TaskManager\\Library\\Library.csproj": {
+              "projectPath": "D:\\Stduai\\Sezon-6\\WuPeEfy\\TaskManager\\Library\\Library.csproj"
             }
           }
         }
@@ -104,13 +97,18 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "Figgle": {
+            "target": "Package",
+            "version": "[0.5.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -130,7 +128,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\minel\\.dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
