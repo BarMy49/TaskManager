@@ -35,6 +35,7 @@
         <system:String x:Key="FilterByCategoryText">Filter by Category</system:String>
         <system:String x:Key="ExitText">Exit</system:String>
         <system:String x:Key="LanguageText">Language</system:String>
+        <system:String x:Key="ThemeText">Theme</system:String>
         
         <!-- Style -->
         <Style TargetType="TextBox">

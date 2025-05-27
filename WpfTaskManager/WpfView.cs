@@ -5,6 +5,7 @@ using System.Windows;
 using TaskManager.Localization;
 using TaskManager.Model;
 using WpfTaskManager;
+using WpfTaskManager.Themes;
 
 namespace TaskManager.View
 {
@@ -31,11 +32,32 @@ namespace TaskManager.View
             }
         }
         
+        private readonly IThemeManager _themeManager;
+        public List<string> AvailableThemes { get; } = new List<string> { "Light", "Dark" };
+
+        private string _selectedTheme = "Light";
+        public string SelectedTheme
+        {
+            get => _selectedTheme;
+            set
+            {
+                if (_selectedTheme != value)
+                {
+                    _selectedTheme = value;
+                    _themeManager.SetTheme(value == "Dark" ? ThemeType.Dark : ThemeType.Light);
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedTheme)));
+                }
+            }
+        }
+        
         // Konstruktor z lokalizacją
-        public WpfView(ILocalizer localizer)
+        public WpfView(ILocalizer localizer, IThemeManager themeManager)
         {
             _localizer = localizer;
+            _themeManager = themeManager;
+            _themeManager.SetTheme(ThemeType.Light);
             _selectedLanguage = _localizer.CurrentLanguage;
+            _selectedTheme = _themeManager.CurrentTheme == ThemeType.Dark ? "Dark" : "Light";
         }
         
         // Odświeżanie UI po zmianie języka

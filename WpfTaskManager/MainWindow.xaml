@@ -4,21 +4,21 @@
         xmlns:converters="clr-namespace:WpfTaskManager.Converters"
         xmlns:localization="clr-namespace:TaskManager.Localization"
         Title="WPF Task Manager" Height="800" Width="1366"
-        Background="#ccffcc"
+        Background="{DynamicResource BackgroundBrush}"
         FontFamily="Colbert">
     <Window.Resources>
-        <converters:BoolToStatusConverter x:Key="BoolToStatusConverter"/>
+        <converters:BoolToStatusConverter x:Key="BoolToStatusConverter" />
 
         <Style TargetType="Button">
-            <Setter Property="Background" Value="#00cc66"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Padding" Value="10,5"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Margin" Value="10,30,10,0"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Height" Value="30"/>
-            <Setter Property="BorderBrush" Value="#009933"/>
+            <Setter Property="Background" Value="{DynamicResource AccentBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Margin" Value="10,30,10,0" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -26,92 +26,250 @@
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 CornerRadius="10">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="Pink"/>
-                    <Setter Property="BorderBrush" Value="HotPink"/>
+                    <Setter Property="Background" Value="{DynamicResource HoverBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource HoverBorderBrush}" />
                 </Trigger>
             </Style.Triggers>
         </Style>
 
-        <Style TargetType="Label">
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="Margin" Value="10,15,10,0"/>
-        </Style>
-
         <Style TargetType="DataGrid">
-            <Setter Property="Background" Value="#ccffcc"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="BorderBrush" Value="#009933"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="RowBackground" Value="#ccffcc"/>
-            <Setter Property="AlternatingRowBackground" Value="#b3ffb3"/>
+            <Setter Property="Background" Value="{DynamicResource BackgroundBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="RowBackground" Value="{DynamicResource BackgroundBrush}" />
+            <Setter Property="AlternatingRowBackground" Value="{DynamicResource AlternateRowBrush}" />
             <Setter Property="CellStyle">
                 <Setter.Value>
                     <Style TargetType="DataGridCell">
-                        <Setter Property="Padding" Value="10,5"/>
-                        <Setter Property="BorderThickness" Value="0.5"/>
-                        <Setter Property="BorderBrush" Value="#009933"/>
+                        <Setter Property="Padding" Value="10,5" />
+                        <Setter Property="BorderThickness" Value="0.5" />
+                        <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="{DynamicResource HeaderBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource HeaderTextBrush}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="10,5" />
+        </Style>
+        <!-- Style do elementów formularza -->
+        <Style x:Key="DarkTextBoxStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="{DynamicResource TextBoxBackgroundBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource TextBoxForegroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderBrush}" />
+            <Setter Property="CaretBrush" Value="{DynamicResource ForegroundBrush}" />
+        </Style>
+        <!-- Style do ComboBox -->
+        <Style x:Key="DarkComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Background" Value="{DynamicResource ComboBoxBackgroundBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource ComboBoxBorderBrush}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <ToggleButton x:Name="ToggleButton"
+                                          BorderBrush="{TemplateBinding BorderBrush}"
+                                          Background="{TemplateBinding Background}"
+                                          Foreground="{TemplateBinding Foreground}"
+                                          IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+                                <ToggleButton.Template>
+                                    <ControlTemplate TargetType="ToggleButton">
+                                        <Border x:Name="Border"
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="1"
+                                                CornerRadius="3">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition Width="20" />
+                                                </Grid.ColumnDefinitions>
+                                                <ContentPresenter Grid.Column="0"
+                                                                  Margin="5,0"
+                                                                  HorizontalAlignment="Left"
+                                                                  VerticalAlignment="Center"
+                                                                  Content="{TemplateBinding Content}"
+                                                                  ContentTemplate="{TemplateBinding ContentTemplate}" />
+                                                <Path Grid.Column="1"
+                                                      HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center"
+                                                      Data="M 0 0 L 4 4 L 8 0 Z"
+                                                      Fill="{DynamicResource ForegroundBrush}" />
+                                            </Grid>
+                                        </Border>
+                                    </ControlTemplate>
+                                </ToggleButton.Template>
+                                <ToggleButton.Content>
+                                    <ContentPresenter Content="{TemplateBinding SelectionBoxItem}"
+                                                      ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                                                      ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}" />
+                                </ToggleButton.Content>
+                            </ToggleButton>
+                            <Popup x:Name="Popup"
+                                   Placement="Bottom"
+                                   IsOpen="{TemplateBinding IsDropDownOpen}"
+                                   AllowsTransparency="False"
+                                   Focusable="False"
+                                   PopupAnimation="Slide">
+                                <Border x:Name="DropDown"
+                                        Width="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}"
+                                        Background="{DynamicResource ComboBoxBackgroundBrush}"
+                                        BorderBrush="{DynamicResource BorderBrush}"
+                                        BorderThickness="1"
+                                        CornerRadius="3"
+                                        Padding="2">
+                                    <ScrollViewer MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                                                  VerticalScrollBarVisibility="Auto">
+                                        <ItemsPresenter KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasItems" Value="False">
+                                <Setter TargetName="DropDown" Property="MinHeight" Value="95" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ComboBoxItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ComboBoxItem">
+                                    <Border x:Name="Bd"
+                                            Padding="5,3"
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="0"
+                                            SnapsToDevicePixels="true">
+                                        <ContentPresenter HorizontalAlignment="Left"
+                                                          VerticalAlignment="Center"
+                                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Bd" Property="Background"
+                                                    Value="{DynamicResource HoverBrush}" />
+                                            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Bd" Property="Background"
+                                                    Value="{DynamicResource AccentBrush}" />
+                                            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Background" Value="{DynamicResource ComboBoxBackgroundBrush}" />
+                        <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
                     </Style>
                 </Setter.Value>
             </Setter>
         </Style>
 
-        <Style TargetType="DataGridColumnHeader">
-            <Setter Property="Background" Value="#00cc66"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontSize" Value="16"/>
-            <Setter Property="BorderBrush" Value="#009933"/>
-            <Setter Property="BorderThickness" Value="2"/>
-            <Setter Property="Padding" Value="10,5"/>
+        <Style x:Key="DarkDatePickerStyle" TargetType="DatePicker">
+            <Setter Property="Background" Value="{DynamicResource DatePickerBackgroundBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource ForegroundBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource DatePickerBorderBrush}" />
         </Style>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
         </Grid.RowDefinitions>
 
         <!-- Pasek wyszukiwania i wybór języka -->
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
             <!-- Wyszukiwarka -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,5">
-                <TextBlock Text="{DynamicResource SearchText}"
-                       VerticalAlignment="Center" FontWeight="Bold" FontSize="16" Margin="0,0,5,0" />
-                <TextBox Width="100" Height="30"
-                     Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"
-                     PreviewKeyDown="SearchBox_PreviewKeyDown"/>
-            </StackPanel>
+            <Border CornerRadius="10" Margin="0,5,0,5"
+                    Background="{DynamicResource MenuBackgroundBrush}"
+                    BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1">
+                <StackPanel Orientation="Horizontal" Margin="10,5" HorizontalAlignment="Center">
+                    <TextBlock Text="{DynamicResource SearchText}"
+                               Foreground="{DynamicResource ForegroundBrush}"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               FontSize="16"
+                               Margin="5,0,5,0" />
+                    <TextBox Width="100" Height="30"
+                             Style="{StaticResource DarkTextBoxStyle}"
+                             Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}"
+                             PreviewKeyDown="SearchBox_PreviewKeyDown"
+                             Margin="0,0,5,0" />
+                </StackPanel>
+            </Border>
 
-            <!-- Wybór języka -->
-            <StackPanel Orientation="Horizontal" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,10,5">
-                <TextBlock Text="{DynamicResource LanguageText}"
-                       VerticalAlignment="Center" FontWeight="Bold" FontSize="16" Margin="0,0,5,0" />
-                <ComboBox Width="100" Height="30"
-                          Margin="0,0,0,5"
-                          HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                          ItemsSource="{Binding AvailableLanguages}"
-                      SelectedItem="{Binding SelectedLanguage}" />
-            </StackPanel>
+
+            <!-- Wybór języka i motywu -->
+            <Border Grid.Column="1" CornerRadius="10" Margin="0,5,10,5"
+                    Background="{DynamicResource MenuBackgroundBrush}"
+                    BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="1">
+                <StackPanel Orientation="Horizontal" Margin="10,5" HorizontalAlignment="Center">
+                    <!-- Wybór języka -->
+                    <TextBlock Text="{DynamicResource LanguageText}"
+                               Foreground="{DynamicResource ForegroundBrush}"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               FontSize="16"
+                               Margin="5,0,5,0" />
+                    <ComboBox Width="100" Height="30"
+                              Style="{StaticResource DarkComboBoxStyle}"
+                              Margin="0,0,15,0"
+                              HorizontalContentAlignment="Center"
+                              VerticalContentAlignment="Center"
+                              ItemsSource="{Binding AvailableLanguages}"
+                              SelectedItem="{Binding SelectedLanguage}" />
+
+                    <!-- Wybór motywu -->
+                    <TextBlock Text="{DynamicResource ThemeText}"
+                               Foreground="{DynamicResource ForegroundBrush}"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               FontSize="16"
+                               Margin="0,0,5,0" />
+                    <ComboBox Width="100" Height="30"
+                              Style="{StaticResource DarkComboBoxStyle}"
+                              Margin="0,0,5,0"
+                              HorizontalContentAlignment="Center"
+                              VerticalContentAlignment="Center"
+                              ItemsSource="{Binding AvailableThemes}"
+                              SelectedItem="{Binding SelectedTheme}" />
+                </StackPanel>
+            </Border>
         </Grid>
 
         <!-- Tabela z zadaniami -->
@@ -119,13 +277,17 @@
                   Grid.Row="1"
                   AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
-                <DataGridTextColumn Header="{DynamicResource TitleText}" Binding="{Binding Title}" Width="*"/>
-                <DataGridTextColumn Header="{DynamicResource DescriptionText}" Binding="{Binding Description}" Width="200"/>
-                <DataGridTextColumn Header="{DynamicResource StatusText}" Binding="{Binding IsCompleted, Converter={StaticResource BoolToStatusConverter}}" Width="100"/>
-                <DataGridTextColumn Header="{DynamicResource CategoryText}" Binding="{Binding Category}" Width="100"/>
-                <DataGridTextColumn Header="{DynamicResource PriorityText}" Binding="{Binding Priority}" Width="100"/>
-                <DataGridTextColumn Header="{DynamicResource DueDateText}" Binding="{Binding DueDate, StringFormat=dd-MM-yyyy}" Width="100"/>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50" />
+                <DataGridTextColumn Header="{DynamicResource TitleText}" Binding="{Binding Title}" Width="*" />
+                <DataGridTextColumn Header="{DynamicResource DescriptionText}" Binding="{Binding Description}"
+                                    Width="200" />
+                <DataGridTextColumn Header="{DynamicResource StatusText}"
+                                    Binding="{Binding IsCompleted, Converter={StaticResource BoolToStatusConverter}}"
+                                    Width="100" />
+                <DataGridTextColumn Header="{DynamicResource CategoryText}" Binding="{Binding Category}" Width="100" />
+                <DataGridTextColumn Header="{DynamicResource PriorityText}" Binding="{Binding Priority}" Width="100" />
+                <DataGridTextColumn Header="{DynamicResource DueDateText}"
+                                    Binding="{Binding DueDate, StringFormat=dd-MM-yyyy}" Width="100" />
             </DataGrid.Columns>
         </DataGrid>
 
@@ -135,111 +297,114 @@
                 <!-- Panel z polami Title, Description, Category, Priority, DueDate -->
                 <StackPanel x:Name="MainFieldsPanel" Visibility="{Binding FieldsVisibility}" Orientation="Vertical">
                     <UniformGrid Columns="2">
-                        <Label Content="{DynamicResource TitleText}"/>
-                        <TextBox Text="{Binding Title}" Width="200"/>
+                        <Label Content="{DynamicResource TitleText}" Foreground="{DynamicResource ForegroundBrush}" />
+                        <TextBox Text="{Binding Title}" Width="200" Style="{StaticResource DarkTextBoxStyle}" />
 
-                        <Label Content="{DynamicResource DescriptionText}"/>
-                        <TextBox Text="{Binding Description}" Width="200"/>
+                        <Label Content="{DynamicResource DescriptionText}"
+                               Foreground="{DynamicResource ForegroundBrush}" />
+                        <TextBox Text="{Binding Description}" Width="200" Style="{StaticResource DarkTextBoxStyle}" />
 
-                        <Label Content="{DynamicResource CategoryText}"/>
-                        <TextBox Text="{Binding Category}" Width="200"/>
-
-                        <Label>
-                            <TextBlock Text="{DynamicResource PriorityText}"/>
-                        </Label>
-                        <ComboBox
-                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                            ItemsSource="{Binding PriorityOptions}" SelectedItem="{Binding Priority}" Width="200"
-                            Margin="0,10,0,10"/>
+                        <Label Content="{DynamicResource CategoryText}" Foreground="{DynamicResource ForegroundBrush}" />
+                        <TextBox Text="{Binding Category}" Width="200" Style="{StaticResource DarkTextBoxStyle}" />
 
                         <Label>
-                            <TextBlock Text="{DynamicResource DueDateText}"/>
+                            <TextBlock Text="{DynamicResource PriorityText}"
+                                       Foreground="{DynamicResource ForegroundBrush}" />
                         </Label>
-                        <DatePicker SelectedDate="{Binding DueDate}" Width="200" Margin="0,10,0,10"/>
+                        <ComboBox Style="{StaticResource DarkComboBoxStyle}"
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                  ItemsSource="{Binding PriorityOptions}" SelectedItem="{Binding Priority}" Width="200"
+                                  Margin="0,10,0,10" />
+
+                        <Label>
+                            <TextBlock Text="{DynamicResource DueDateText}"
+                                       Foreground="{DynamicResource ForegroundBrush}" />
+                        </Label>
+                        <DatePicker SelectedDate="{Binding DueDate}" Width="200" Margin="0,10,0,10"
+                                    Style="{StaticResource DarkDatePickerStyle}" />
                     </UniformGrid>
 
                     <!-- Przycisk "Dodaj" -->
                     <Button Content="{DynamicResource AddText}"
                             Visibility="{Binding AddConfirmVisibility}"
-                            Click="AddConfirm_Click"/>
+                            Click="AddConfirm_Click" />
 
                     <!-- Przycisk "Edytuj" (pod polami) -->
                     <Button Content="{DynamicResource EditText}"
                             Visibility="{Binding EditConfirmVisibility}"
-                            Click="EditConfirm_Click"/>
+                            Click="EditConfirm_Click" />
                 </StackPanel>
 
                 <!-- Grid z Borderami do: usuwania, togglowania, edycji ID, filtra kategorii -->
                 <Grid Margin="20,0,0,0" VerticalAlignment="Top" Width="300" Height="200">
                     <!-- Border usuwania -->
-                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
-                            Visibility="{Binding DeleteVisibility}" Background="#ccffcc"
+                    <Border BorderThickness="2" BorderBrush="{DynamicResource BorderBrush}" CornerRadius="10"
+                            Visibility="{Binding DeleteVisibility}" Background="{DynamicResource BackgroundBrush}"
                             Padding="10">
                         <StackPanel>
                             <TextBlock Text="{DynamicResource EnterDeleteIdText}"
-                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                                       Foreground="{DynamicResource ForegroundBrush}" Margin="5" FontWeight="Bold" />
                             <TextBox Text="{Binding DeleteId, UpdateSourceTrigger=PropertyChanged}"
-                                     Background="#ccffcc"
-                                     Foreground="Black"
+                                     Style="{StaticResource DarkTextBoxStyle}"
                                      PreviewKeyDown="DeleteId_PreviewKeyDown"
-                                     Margin="5"/>
+                                     Margin="5" />
                             <!-- Przycisk "Usuń" -->
                             <Button Content="{DynamicResource DeleteText}"
                                     Margin="5"
-                                    Click="DeleteIdButton_Click"/>
+                                    Click="DeleteIdButton_Click" />
                         </StackPanel>
                     </Border>
 
                     <!-- Border togglowania -->
-                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
-                            Visibility="{Binding ToggleVisibility}" Background="#ccffcc"
+                    <Border BorderThickness="2" BorderBrush="{DynamicResource BorderBrush}" CornerRadius="10"
+                            Visibility="{Binding ToggleVisibility}" Background="{DynamicResource BackgroundBrush}"
                             Padding="10">
                         <StackPanel>
                             <TextBlock Text="{DynamicResource EnterToggleIdText}"
-                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                                       Foreground="{DynamicResource ForegroundBrush}" Margin="5" FontWeight="Bold" />
                             <TextBox Text="{Binding ToggleId, UpdateSourceTrigger=PropertyChanged}"
-                                     Background="#ccffcc"
-                                     Foreground="Black"
+                                     Style="{StaticResource DarkTextBoxStyle}"
                                      PreviewKeyDown="ToggleId_PreviewKeyDown"
-                                     Margin="5"/>
+                                     Margin="5" />
                             <!-- Przycisk "Zmień na Ukończone/Nieukończone" -->
                             <Button Content="{DynamicResource ChangeStatusText}"
                                     Margin="5"
-                                    Click="ToggleIdButton_Click"/>
+                                    Click="ToggleIdButton_Click" />
                         </StackPanel>
                     </Border>
 
                     <!-- Border edycji -->
-                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
-                            Visibility="{Binding EditVisibility}" Background="#ccffcc"
+                    <Border BorderThickness="2" BorderBrush="{DynamicResource BorderBrush}" CornerRadius="10"
+                            Visibility="{Binding EditVisibility}" Background="{DynamicResource BackgroundBrush}"
                             Padding="10">
                         <StackPanel>
                             <TextBlock Text="{DynamicResource EnterEditIdText}"
-                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                                       Foreground="{DynamicResource ForegroundBrush}" Margin="5" FontWeight="Bold" />
                             <TextBox Text="{Binding EditId, UpdateSourceTrigger=PropertyChanged}"
-                                     Background="#ccffcc"
-                                     Foreground="Black"
+                                     Style="{StaticResource DarkTextBoxStyle}"
                                      PreviewKeyDown="EditId_PreviewKeyDown"
-                                     Margin="5"/>
-                            <Button Content="{DynamicResource SearchByIdText}" Click="SearchById_Click" Margin="5"/>
+                                     Margin="5" />
+                            <Button Content="{DynamicResource SearchByIdText}"
+                                    Margin="5"
+                                    Click="SearchById_Click" />
                         </StackPanel>
                     </Border>
 
                     <!-- Border do filtrowania po kategorii -->
-                    <Border BorderThickness="2" BorderBrush="#009933" CornerRadius="10"
-                            Visibility="{Binding CategoryFilterVisibility}" Background="#ccffcc"
+                    <Border BorderThickness="2" BorderBrush="{DynamicResource BorderBrush}" CornerRadius="10"
+                            Visibility="{Binding CategoryFilterVisibility}"
+                            Background="{DynamicResource BackgroundBrush}"
                             Padding="10">
                         <StackPanel>
                             <TextBlock Text="{DynamicResource SearchByCategoryText}"
-                                       Foreground="Black" Margin="5" FontWeight="Bold"/>
+                                       Foreground="{DynamicResource ForegroundBrush}" Margin="5" FontWeight="Bold" />
                             <TextBox Text="{Binding CategoryFilterText, UpdateSourceTrigger=PropertyChanged}"
-                                     Background="#ccffcc"
-                                     Foreground="Black"
+                                     Style="{StaticResource DarkTextBoxStyle}"
                                      PreviewKeyDown="CategoryFilterText_PreviewKeyDown"
-                                     Margin="5"/>
+                                     Margin="5" />
                             <Button Content="{DynamicResource SearchText}"
                                     Margin="5"
-                                    Click="CategoryFilterTextButton_Click"/>
+                                    Click="CategoryFilterTextButton_Click" />
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -249,7 +414,6 @@
         <!-- Prawa kolumna - przyciski akcji -->
         <Grid Grid.Row="0" Grid.RowSpan="4" Grid.Column="1">
             <StackPanel>
-                <!-- Przyciski menu głównego -->
                 <Button Content="{DynamicResource AllTasksText}" Click="ListAllTasks_Click" />
                 <Button Content="{DynamicResource AddTaskText}" Click="AddTask_Click" />
                 <Button Content="{DynamicResource EditTaskText}" Click="EditTask_Click" />
@@ -258,13 +422,14 @@
                 <Button Content="{DynamicResource ListIncompleteText}" Click="ListIncompleteTasks_Click" />
                 <Button Content="{DynamicResource ListByPriorityText}" Click="ListTasksByPriority_Click" />
                 <Button Content="{DynamicResource FilterByCategoryText}" Click="FilterTasksByCategory_Click" />
+                <Button Content="{DynamicResource SearchText}" Click="SearchTasks_Click" />
                 <Button Content="{DynamicResource ExitText}" Click="Exit_Click" />
             </StackPanel>
         </Grid>
 
         <!-- Dekoracyjny napis -->
         <TextBlock Text="TaskManager"
-                   Foreground="#004d00"
+                   Foreground="{DynamicResource TitleTextBrush}"
                    FontWeight="Bold"
                    FontFamily="Impact"
                    FontSize="70"
@@ -274,6 +439,6 @@
                    Grid.Column="1"
                    Grid.Row="2"
                    Height="110"
-                   Width="417"/>
+                   Width="417" />
     </Grid>
 </Window>

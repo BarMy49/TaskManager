@@ -3,17 +3,20 @@ using TaskManager.Controller;
 using TaskManager.Localization;
 using TaskManager.Model;
 using TaskManager.View;
+using WpfTaskManager.Themes;
 
 namespace WpfTaskManager;
 
 public partial class App : Application
 {
     private ILocalizer _localizer;
+    private IThemeManager _themeManager;
     protected override void OnStartup(StartupEventArgs e)
     {
         base.OnStartup(e);
         _localizer = new ResourceLocalizer();
-        var mainWindow = new MainWindow(_localizer);
+        _themeManager = new ThemeManager();
+        var mainWindow = new MainWindow(_localizer, _themeManager);
         mainWindow.Show();
         //Dispatcher.Invoke(
         Run(mainWindow);
@@ -24,7 +27,7 @@ public partial class App : Application
         {
             ITaskRepository repository = new TaskRepository();
 
-            var wpfView = new WpfView(_localizer);
+            var wpfView = new WpfView(_localizer, _themeManager);
             var controller = new TaskController(repository, wpfView, wpfView.WaitForKey);
             mainWindow.SetView(wpfView, controller);
 

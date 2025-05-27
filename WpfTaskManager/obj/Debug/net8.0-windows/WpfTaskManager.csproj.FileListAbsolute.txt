@@ -227,3 +227,5 @@ C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-
 C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\WpfTaskManager.csproj.GenerateResource.cache
 C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\pl\WpfTaskManager.resources.cs
 C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\pl\WpfTaskManager.resources.dll
+C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\Themes\DarkTheme.baml
+C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\Themes\LightTheme.baml

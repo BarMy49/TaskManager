@@ -4,6 +4,7 @@ using TaskManager.Controller;
 using TaskManager.View;
 using System.Windows.Input;
 using TaskManager.Localization;
+using WpfTaskManager.Themes;
 
 namespace WpfTaskManager
 {
@@ -12,12 +13,13 @@ namespace WpfTaskManager
         private WpfView? view;
         private TaskController? controller;
         private readonly ILocalizer _localizer;
+        private readonly IThemeManager _themeManager;
 
-        public MainWindow(ILocalizer localizer)
+        public MainWindow(ILocalizer localizer, IThemeManager themeManager)
         {
             InitializeComponent();
             _localizer = localizer;
-            
+            _themeManager = themeManager;
         }
 
         public void SetView(WpfView view, TaskController controller)

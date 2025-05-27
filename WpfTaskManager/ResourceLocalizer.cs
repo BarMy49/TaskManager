@@ -99,6 +99,7 @@ namespace TaskManager.Localization
             app.Resources["FilterByCategoryText"] = GetString("FilterByCategory");
             app.Resources["ExitText"] = GetString("Exit");
             app.Resources["LanguageText"] = GetString("Language");
+            app.Resources["ThemeText"] = GetString("ThemeText");
         }
 
         public string CurrentLanguage => _currentCulture.TwoLetterISOLanguageName;

@@ -111,4 +111,7 @@
   <data name="Exit" xml:space="preserve">
     <value>Wyjście</value>
   </data>
+  <data name="ThemeText" xml:space="preserve">
+    <value>Styl</value>
+  </data>
 </root>
