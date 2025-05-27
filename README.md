@@ -1,7 +1,9 @@
 # TODO
+- Theme Switcher **Bartosz**
 - Dodanie API Outlook calendar (optional) **Bartosz**
-- dodać zaznaczanie zadań i obsługę usuwania i edytowania za pomocą tego **Adrian**
-- dynamiczna zmiana widoku (jeżeli zaznaczone 1 to można zrobić wszystko, jeżeli więcej to nie można edytować np.) **Adrian**
+- Edit Visuals(Tabela ma być na całą wysokość, Przyciski troche zmnieszyć, pozamieniać na okna dialogowe)
+- dodać zaznaczanie zadań i obsługę usuwania i edytowania za pomocą tego (Dwa takie same przyciski które się podmieniają)**Adrian**
+- dynamiczna zmiana widoku (jeżeli zaznaczone 1 to można zrobić wszystko, jeżeli więcej to nie można edytować np. + Filtrowanie to okno dialogowe z przyciskami) **Adrian**
 - jeżeli zadanie jest nie zostało zakończone w terminie to staje się czerwone **Adrian**
 - jeżeli jest bliskie końcowi wykonania to pomarańczowy (or smthn) **Adrian**
 - grafika wektorowa (jeżeli grafikowi by się chciało) **Adrian**
