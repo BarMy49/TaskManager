@@ -277,6 +277,16 @@
                   Grid.Row="1"
                   AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="DataGrid_SelectionChanged">
             <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox Tag="{Binding Id}"
+                                      Checked="TaskCheckBox_Checked"
+                                      Unchecked="TaskCheckBox_Unchecked"
+                                      HorizontalAlignment="Center" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50" />
                 <DataGridTextColumn Header="{DynamicResource TitleText}" Binding="{Binding Title}" Width="*" />
                 <DataGridTextColumn Header="{DynamicResource DescriptionText}" Binding="{Binding Description}"
@@ -356,22 +366,22 @@
                     </Border>
 
                     <!-- Border togglowania -->
-                    <Border BorderThickness="2" BorderBrush="{DynamicResource BorderBrush}" CornerRadius="10"
-                            Visibility="{Binding ToggleVisibility}" Background="{DynamicResource BackgroundBrush}"
-                            Padding="10">
-                        <StackPanel>
-                            <TextBlock Text="{DynamicResource EnterToggleIdText}"
-                                       Foreground="{DynamicResource ForegroundBrush}" Margin="5" FontWeight="Bold" />
-                            <TextBox Text="{Binding ToggleId, UpdateSourceTrigger=PropertyChanged}"
-                                     Style="{StaticResource DarkTextBoxStyle}"
-                                     PreviewKeyDown="ToggleId_PreviewKeyDown"
-                                     Margin="5" />
-                            <!-- Przycisk "Zmień na Ukończone/Nieukończone" -->
-                            <Button Content="{DynamicResource ChangeStatusText}"
-                                    Margin="5"
-                                    Click="ToggleIdButton_Click" />
-                        </StackPanel>
-                    </Border>
+                    <!-- <Border BorderThickness="2" BorderBrush="{DynamicResource BorderBrush}" CornerRadius="10" -->
+                    <!--         Visibility="{Binding ToggleVisibility}" Background="{DynamicResource BackgroundBrush}" -->
+                    <!--         Padding="10"> -->
+                    <!--     <StackPanel> -->
+                    <!--         <TextBlock Text="{DynamicResource EnterToggleIdText}" -->
+                    <!--                    Foreground="{DynamicResource ForegroundBrush}" Margin="5" FontWeight="Bold" /> -->
+                    <!--         <TextBox Text="{Binding ToggleId, UpdateSourceTrigger=PropertyChanged}" -->
+                    <!--                  Style="{StaticResource DarkTextBoxStyle}" -->
+                    <!--                  PreviewKeyDown="ToggleId_PreviewKeyDown" -->
+                    <!--                  Margin="5" /> -->
+                    <!--         ~1~ Przycisk "Zmień na Ukończone/Nieukończone" @1@ -->
+                    <!--         <Button Content="{DynamicResource ChangeStatusText}" -->
+                    <!--                 Margin="5" -->
+                    <!--                 Click="ToggleIdButton_Click" /> -->
+                    <!--     </StackPanel> -->
+                    <!-- </Border> -->
 
                     <!-- Border edycji -->
                     <Border BorderThickness="2" BorderBrush="{DynamicResource BorderBrush}" CornerRadius="10"

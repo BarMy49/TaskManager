@@ -135,4 +135,7 @@
   <data name="ExportSuccess" xml:space="preserve">
     <value>Exported succesfully</value>
   </data>
+  <data name="TasksChanged" xml:space="preserve">
+    <value>Changed tasks:</value>
+  </data>
 </root>

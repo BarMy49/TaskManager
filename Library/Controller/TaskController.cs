@@ -167,16 +167,17 @@ namespace TaskManager.Controller
             {
                 task.IsCompleted = !task.IsCompleted;
                 repository.UpdateTask(task);
-                view.DisplayMessage($"Zadanie oznaczone jako {(task.IsCompleted ? "ukończone" : "nieukończone")}.");
+                // view.DisplayMessage($"Zadanie oznaczone jako {(task.IsCompleted ? "ukończone" : "nieukończone")}.");
 
                 // Odświeżanie
-                ListAllTasks();
+                // ListAllTasks();
             }
             else
             {
                 view.DisplayMessage("Zadanie o podanym ID nie istnieje.");
             }
         }
+
 
         public void ListIncompleteTasks()
         {

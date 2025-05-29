@@ -3,7 +3,7 @@
     "Id": 1,
     "Title": "asdf",
     "Description": "asdf",
-    "IsCompleted": true,
+    "IsCompleted": false,
     "Category": "asdf",
     "Priority": "Low",
     "DueDate": "2022-09-12T00:00:00"
@@ -12,7 +12,7 @@
     "Id": 2,
     "Title": "vbnm",
     "Description": "vbnm",
-    "IsCompleted": false,
+    "IsCompleted": true,
     "Category": "vbnm",
     "Priority": "High",
     "DueDate": "2025-05-03T00:00:00"
@@ -21,7 +21,7 @@
     "Id": 3,
     "Title": "asd",
     "Description": "asd",
-    "IsCompleted": false,
+    "IsCompleted": true,
     "Category": "asd",
     "Priority": "Medium",
     "DueDate": "2001-01-01T00:00:00"

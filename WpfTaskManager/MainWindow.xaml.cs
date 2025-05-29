@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using TaskManager.Controller;
 using TaskManager.View;
 using System.Windows.Input;
@@ -17,6 +18,7 @@ namespace WpfTaskManager
         private TaskController? controller;
         private readonly ILocalizer _localizer;
         private readonly IThemeManager _themeManager;
+        private readonly HashSet<int> SelectedTasks = new HashSet<int>();
 
         public MainWindow(ILocalizer localizer, IThemeManager themeManager)
         {
@@ -130,17 +132,19 @@ namespace WpfTaskManager
 
         private void ToggleTaskCompletion_Click(object sender, RoutedEventArgs e)
         {
-            view.FieldsVisibility = Visibility.Collapsed;
-            view.AddConfirmVisibility = Visibility.Collapsed;
-            view.EditConfirmVisibility = Visibility.Collapsed;
-            view.DeleteVisibility = Visibility.Collapsed;
-            view.EditVisibility = Visibility.Collapsed;
-            view.CategoryFilterVisibility = Visibility.Collapsed;
-
-            view.ToggleVisibility = Visibility.Visible;
+            // view.FieldsVisibility = Visibility.Collapsed;
+            // view.AddConfirmVisibility = Visibility.Collapsed;
+            // view.EditConfirmVisibility = Visibility.Collapsed;
+            // view.DeleteVisibility = Visibility.Collapsed;
+            // view.EditVisibility = Visibility.Collapsed;
+            // view.CategoryFilterVisibility = Visibility.Collapsed;
+            //
+            // view.ToggleVisibility = Visibility.Visible;
             view.ToggleId = null;
 
             view.Ignore = true;
+            
+            ToggleCompletion();
         }
 
         private void FilterTasksByCategory_Click(object sender, RoutedEventArgs e)
@@ -229,30 +233,47 @@ namespace WpfTaskManager
         }
 
         // ============================ TOGGLE ============================
-        private void ToggleId_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                e.Handled = true;
-                ToggleCompletion();
-            }
-        }
-
-        private void ToggleIdButton_Click(object sender, RoutedEventArgs e)
-        {
-            ToggleCompletion();
-        }
+        // private void ToggleId_PreviewKeyDown(object sender, KeyEventArgs e)
+        // {
+        //     if (e.Key == Key.Enter)
+        //     {
+        //         e.Handled = true;
+        //         ToggleCompletion();
+        //     }
+        // }
+        //
+        // private void ToggleIdButton_Click(object sender, RoutedEventArgs e)
+        // {
+        //     ToggleCompletion();
+        // }
 
         private void ToggleCompletion()
         {
             if (view != null && controller != null)
             {
                 view.Ignore = true;
-                controller.ToggleTaskCompletion();
-                view.ToggleVisibility = Visibility.Collapsed;
+                
+                var tasksToToggle = view.Records
+                    .Where(task => SelectedTasks.Contains(task.Id))
+                    .ToList();  // ważne, ToList() tworzy nową listę kopię
+
+                if (view?.Records != null)
+                {
+                    foreach (var task in tasksToToggle)
+                    {
+                        view.ToggleId = task.Id.ToString();
+                        controller.ToggleTaskCompletion();
+                    }
+                }
+                controller?.ListAllTasks();
+                // view.ToggleVisibility = Visibility.Collapsed;
+                SelectedTasks.Clear();
+                TasksGrid.Items.Refresh();
                 view.ToggleId = null;
+                view.DisplayMessage($"{_localizer.GetString("TasksChanged")}: {string.Join(", ", tasksToToggle.Select(t => t.Id))}");
             }
         }
+
 
         // ============================ EDYCJA ============================
         private void EditId_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -327,6 +348,8 @@ namespace WpfTaskManager
                 view.CategoryFilterText = null;
             }
         }
+
+        // =============================== ADDED ============================
 
         private void ExportPdf_Click(object sender, RoutedEventArgs e)
         {
@@ -422,6 +445,7 @@ namespace WpfTaskManager
             }).GeneratePdf(dlg.FileName);
 
             MessageBox.Show(_localizer.GetString("ExportSuccess"));
+
             IContainer HeaderCellStyle(IContainer container) =>
                 container
                     .Background(Colors.Blue.Medium)
@@ -437,6 +461,18 @@ namespace WpfTaskManager
                     .PaddingHorizontal(4)
                     .AlignLeft()
                     .AlignMiddle();
+        }
+
+        private void TaskCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox checkBox && checkBox.Tag is int id)
+                SelectedTasks.Add(id);
+        }
+
+        private void TaskCheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox checkBox && checkBox.Tag is int id)
+                SelectedTasks.Remove(id);
         }
     }
 }
