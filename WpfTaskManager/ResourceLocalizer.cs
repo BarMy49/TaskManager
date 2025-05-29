@@ -78,7 +78,7 @@ namespace TaskManager.Localization
             app.Resources["CategoryText"] = GetString("Category");
             app.Resources["PriorityText"] = GetString("Priority");
             app.Resources["DueDateText"] = GetString("DueDate");
-            app.Resources["PriorityFieldText"] = GetString("PriorityField");
+            app.Resources["PriorityFieldText"] = GetString("Priority");
             app.Resources["DueDateFieldText"] = GetString("DueDateField");
             app.Resources["AddText"] = GetString("Add");
             app.Resources["EditText"] = GetString("Edit");
@@ -100,6 +100,7 @@ namespace TaskManager.Localization
             app.Resources["ExitText"] = GetString("Exit");
             app.Resources["LanguageText"] = GetString("Language");
             app.Resources["ThemeText"] = GetString("ThemeText");
+            app.Resources["ExportPdfText"] = GetString("ExportPdfText");
         }
 
         public string CurrentLanguage => _currentCulture.TwoLetterISOLanguageName;

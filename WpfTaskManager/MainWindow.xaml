@@ -422,7 +422,7 @@
                 <Button Content="{DynamicResource ListIncompleteText}" Click="ListIncompleteTasks_Click" />
                 <Button Content="{DynamicResource ListByPriorityText}" Click="ListTasksByPriority_Click" />
                 <Button Content="{DynamicResource FilterByCategoryText}" Click="FilterTasksByCategory_Click" />
-                <Button Content="{DynamicResource SearchText}" Click="SearchTasks_Click" />
+                <Button Content="{DynamicResource ExportPdfText}" Click="ExportPdf_Click" />
                 <Button Content="{DynamicResource ExitText}" Click="Exit_Click" />
             </StackPanel>
         </Grid>

@@ -8,5 +8,4 @@
 - grafika wektorowa (jeżeli grafikowi by się chciało) **Adrian**
 - animacje można pododawać **Adrian**
 - powiadomienia w tle, ikona w trayu **Adrian**
-- konwertowanie listy zadań na pdf
 - instalator 

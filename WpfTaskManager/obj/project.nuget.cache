@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WAIPWan2mhc=",
+  "dgSpecHash": "jlu/7N9GolQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\barte\\source\\Repos\\BarMy49\\TaskManager\\WpfTaskManager\\WpfTaskManager.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\barte\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
+    "C:\\Users\\barte\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512",
+    "C:\\Users\\barte\\.nuget\\packages\\questpdf\\2025.5.0\\questpdf.2025.5.0.nupkg.sha512"
   ],
   "logs": []
 }

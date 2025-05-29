@@ -3,6 +3,10 @@ using System.Windows;
 using TaskManager.Controller;
 using TaskManager.View;
 using System.Windows.Input;
+using Microsoft.Win32;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
 using TaskManager.Localization;
 using WpfTaskManager.Themes;
 
@@ -27,7 +31,7 @@ namespace WpfTaskManager
             this.controller = controller;
             DataContext = this.view = view;
         }
-        
+
         public void RefreshColumnHeaders()
         {
             var loc = (ResourceLocalizer)_localizer;
@@ -39,12 +43,12 @@ namespace WpfTaskManager
             TasksGrid.Columns[5].Header = Application.Current.Resources["PriorityText"];
             TasksGrid.Columns[6].Header = Application.Current.Resources["DueDateText"];
         }
-        
+
         public void RefreshControllerBindings()
         {
             // Ponownie ustaw DataContext
             DataContext = view;
-    
+
             // Uaktualnij bindowania kontrolek
             if (TasksGrid != null)
             {
@@ -138,7 +142,7 @@ namespace WpfTaskManager
 
             view.Ignore = true;
         }
-        
+
         private void FilterTasksByCategory_Click(object sender, RoutedEventArgs e)
         {
             // Sneaky inne formularze
@@ -151,7 +155,7 @@ namespace WpfTaskManager
 
             // Nowy border do filtra kategorii
             view.CategoryFilterVisibility = Visibility.Visible;
-            view.CategoryFilterText = null; 
+            view.CategoryFilterText = null;
 
             view.Ignore = true;
         }
@@ -207,10 +211,12 @@ namespace WpfTaskManager
                 DeleteItem();
             }
         }
+
         private void DeleteIdButton_Click(object sender, RoutedEventArgs e)
         {
             DeleteItem();
         }
+
         private void DeleteItem()
         {
             if (view != null && controller != null)
@@ -231,10 +237,12 @@ namespace WpfTaskManager
                 ToggleCompletion();
             }
         }
+
         private void ToggleIdButton_Click(object sender, RoutedEventArgs e)
         {
             ToggleCompletion();
         }
+
         private void ToggleCompletion()
         {
             if (view != null && controller != null)
@@ -255,6 +263,7 @@ namespace WpfTaskManager
                 SearchById_Click(sender, e);
             }
         }
+
         private void SearchById_Click(object sender, RoutedEventArgs e)
         {
             if (view != null && controller != null)
@@ -263,6 +272,7 @@ namespace WpfTaskManager
                 controller.SearchTaskById();
             }
         }
+
         private void AddConfirm_Click(object sender, RoutedEventArgs e)
         {
             if (view != null && controller != null)
@@ -274,6 +284,7 @@ namespace WpfTaskManager
                 view.AddConfirmVisibility = Visibility.Collapsed;
             }
         }
+
         private void EditConfirm_Click(object sender, RoutedEventArgs e)
         {
             if (view != null && controller != null)
@@ -297,11 +308,13 @@ namespace WpfTaskManager
                 FilterCategory();
             }
         }
+
         // Obsługa kliknięcia przycisku "Szukaj"
         private void CategoryFilterTextButton_Click(object sender, RoutedEventArgs e)
         {
             FilterCategory();
         }
+
         // Metoda wywołująca logikę filtra w kontrolerze
         private void FilterCategory()
         {
@@ -313,6 +326,111 @@ namespace WpfTaskManager
                 view.CategoryFilterVisibility = Visibility.Collapsed;
                 view.CategoryFilterText = null;
             }
+        }
+
+        private void ExportPdf_Click(object sender, RoutedEventArgs e)
+        {
+            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+
+            var tasks = view?.Records;
+            if (tasks == null || tasks.Count == 0)
+            {
+                MessageBox.Show(_localizer.GetString("NoTasksToExport"));
+                return;
+            }
+
+            var dlg = new SaveFileDialog
+            {
+                Filter = "PDF (*.pdf)|*.pdf",
+                FileName = "Tasks.pdf"
+            };
+            if (dlg.ShowDialog() != true) return;
+
+            Document.Create(container =>
+                {
+                    container.Page(page =>
+                    {
+                        page.Margin(40);
+                        page.Size(PageSizes.A4);
+                        page.PageColor(Colors.White);
+                        page.DefaultTextStyle(x => x.FontSize(10).FontFamily("Arial"));
+
+                        page.Header()
+                            .Text(_localizer.GetString("TaskList"))
+                            .SemiBold().FontSize(18).FontColor(Colors.Blue.Darken2).AlignCenter();
+
+                        page.Content().Table(table =>
+                        {
+                            table.ColumnsDefinition(columns =>
+                            {
+                                columns.RelativeColumn(1.2f); // Title
+                                columns.RelativeColumn(2); // Description
+                                columns.RelativeColumn(); // Status
+                                columns.RelativeColumn(); // Category
+                                columns.RelativeColumn(); // Priority
+                                columns.RelativeColumn(); // DueDate
+                            });
+
+                            // Nagłówki
+                            table.Header(header =>
+                            {
+                                foreach (var title in new[]
+                                             { "Title", "Description", "Status", "Category", "Priority", "DueDate" })
+                                {
+                                    header.Cell().Element(CellHeaderStyle).Text(_localizer.GetString(title)).Bold()
+                                        .FontColor(Colors.White);
+                                }
+
+                                static IContainer CellHeaderStyle(IContainer container)
+                                {
+                                    return container
+                                        .Background(Colors.Blue.Medium)
+                                        .PaddingVertical(5)
+                                        .PaddingHorizontal(4)
+                                        .AlignCenter()
+                                        .ShowOnce();
+                                }
+                            });
+
+                            // Wiersze z danymi
+                            bool alternate = false;
+                            foreach (var task in tasks)
+                            {
+                                var bgColor = alternate ? Colors.Grey.Lighten3 : Colors.White;
+                                alternate = !alternate;
+
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Title).SemiBold();
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Description).WrapAnywhere();
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.IsCompleted
+                                    ? _localizer.GetString("Completed")
+                                    : _localizer.GetString("NotCompleted"));
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Category);
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Priority.ToString());
+                                table.Cell().Element(c => CellStyle(c, bgColor))
+                                    .Text(task.DueDate?.ToString("dd-MM-yyyy") ?? "");
+                            }
+
+                            static IContainer CellStyle(IContainer container, string bg)
+                            {
+                                return container
+                                    .Background(bg)
+                                    .PaddingVertical(4)
+                                    .PaddingHorizontal(4)
+                                    .AlignLeft()
+                                    .AlignMiddle();
+                            }
+                        });
+
+                        page.Footer().AlignRight().Text(text =>
+                        {
+                            text.Span(_localizer.GetString("GeneratedOn") + " ").FontSize(8);
+                            text.Span(DateTime.Now.ToString("dd-MM-yyyy HH:mm")).FontSize(8).SemiBold();
+                        });
+                    });
+                })
+                .GeneratePdf(dlg.FileName);
+
+            MessageBox.Show(_localizer.GetString("ExportSuccess"));
         }
     }
 }

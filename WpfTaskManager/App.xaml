@@ -36,6 +36,7 @@
         <system:String x:Key="ExitText">Exit</system:String>
         <system:String x:Key="LanguageText">Language</system:String>
         <system:String x:Key="ThemeText">Theme</system:String>
+        <system:String x:Key="ExportPdfText">Export to PDF</system:String>
         
         <!-- Style -->
         <Style TargetType="TextBox">

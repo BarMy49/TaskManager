@@ -13,6 +13,7 @@ public partial class App : Application
     private IThemeManager _themeManager;
     protected override void OnStartup(StartupEventArgs e)
     {
+        QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
         base.OnStartup(e);
         _localizer = new ResourceLocalizer();
         _themeManager = new ThemeManager();

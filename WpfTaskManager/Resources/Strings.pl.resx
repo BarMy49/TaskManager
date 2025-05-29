@@ -51,7 +51,7 @@
   <data name="DueDate" xml:space="preserve">
     <value>Termin</value>
   </data>
-  <data name="PriorityField" xml:space="preserve">
+  <data name="Priority" xml:space="preserve">
     <value>Priorytet</value>
   </data>
   <data name="DueDateField" xml:space="preserve">
@@ -113,5 +113,26 @@
   </data>
   <data name="ThemeText" xml:space="preserve">
     <value>Styl</value>
+  </data>
+  <data name="ExportPdfText" xml:space="preserve">
+    <value>Wyeksportuj do PDF</value>
+  </data>
+  <data name="NoTasksToExport" xml:space="preserve">
+    <value>Brak zadań do wyeksportowania</value>
+  </data>
+  <data name="TaskList" xml:space="preserve">
+    <value>Lista zadań</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Ukończone</value>
+  </data>
+  <data name="NotCompleted" xml:space="preserve">
+    <value>Nieukończone</value>
+  </data>
+  <data name="GeneratedOn" xml:space="preserve">
+    <value>Wygenerowano</value>
+  </data>
+  <data name="ExportSuccess" xml:space="preserve">
+    <value>Wyeksportowano pomyślnie</value>
   </data>
 </root>
