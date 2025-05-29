@@ -3,7 +3,7 @@
     "Id": 1,
     "Title": "asdf",
     "Description": "asdf",
-    "IsCompleted": false,
+    "IsCompleted": true,
     "Category": "asdf",
     "Priority": "Low",
     "DueDate": "2022-09-12T00:00:00"

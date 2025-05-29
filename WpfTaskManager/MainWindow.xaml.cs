@@ -1,5 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.Windows;
+﻿using System.Windows;
 using TaskManager.Controller;
 using TaskManager.View;
 using System.Windows.Input;
@@ -30,6 +29,7 @@ namespace WpfTaskManager
         {
             this.controller = controller;
             DataContext = this.view = view;
+            controller?.ListAllTasks();
         }
 
         public void RefreshColumnHeaders()
@@ -330,8 +330,6 @@ namespace WpfTaskManager
 
         private void ExportPdf_Click(object sender, RoutedEventArgs e)
         {
-            QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
-
             var tasks = view?.Records;
             if (tasks == null || tasks.Count == 0)
             {
@@ -346,91 +344,99 @@ namespace WpfTaskManager
             };
             if (dlg.ShowDialog() != true) return;
 
+            var columnKeys = new[] { "Title", "Description", "Status", "Category", "Priority", "DueDate" };
+
             Document.Create(container =>
+            {
+                container.Page(page =>
                 {
-                    container.Page(page =>
+                    page.Margin(40);
+                    page.Size(PageSizes.A4);
+                    page.PageColor(Colors.White);
+                    page.DefaultTextStyle(x => x.FontSize(10).FontFamily("Arial"));
+
+                    page.Header()
+                        .Text(_localizer.GetString("TaskList"))
+                        .SemiBold().FontSize(18).FontColor(Colors.Blue.Darken2).AlignCenter();
+
+                    page.Content().Table(table =>
                     {
-                        page.Margin(40);
-                        page.Size(PageSizes.A4);
-                        page.PageColor(Colors.White);
-                        page.DefaultTextStyle(x => x.FontSize(10).FontFamily("Arial"));
-
-                        page.Header()
-                            .Text(_localizer.GetString("TaskList"))
-                            .SemiBold().FontSize(18).FontColor(Colors.Blue.Darken2).AlignCenter();
-
-                        page.Content().Table(table =>
+                        // Kolumny: proporcje
+                        table.ColumnsDefinition(columns =>
                         {
-                            table.ColumnsDefinition(columns =>
+                            columns.RelativeColumn(1.2f); // Title
+                            columns.RelativeColumn(2f); // Description
+                            columns.RelativeColumn(); // Status
+                            columns.RelativeColumn(); // Category
+                            columns.RelativeColumn(); // Priority
+                            columns.RelativeColumn(); // DueDate
+                        });
+
+                        // Nagłówki
+                        table.Header(header =>
+                        {
+                            foreach (var key in columnKeys)
                             {
-                                columns.RelativeColumn(1.2f); // Title
-                                columns.RelativeColumn(2); // Description
-                                columns.RelativeColumn(); // Status
-                                columns.RelativeColumn(); // Category
-                                columns.RelativeColumn(); // Priority
-                                columns.RelativeColumn(); // DueDate
-                            });
-
-                            // Nagłówki
-                            table.Header(header =>
-                            {
-                                foreach (var title in new[]
-                                             { "Title", "Description", "Status", "Category", "Priority", "DueDate" })
-                                {
-                                    header.Cell().Element(CellHeaderStyle).Text(_localizer.GetString(title)).Bold()
-                                        .FontColor(Colors.White);
-                                }
-
-                                static IContainer CellHeaderStyle(IContainer container)
-                                {
-                                    return container
-                                        .Background(Colors.Blue.Medium)
-                                        .PaddingVertical(5)
-                                        .PaddingHorizontal(4)
-                                        .AlignCenter()
-                                        .ShowOnce();
-                                }
-                            });
-
-                            // Wiersze z danymi
-                            bool alternate = false;
-                            foreach (var task in tasks)
-                            {
-                                var bgColor = alternate ? Colors.Grey.Lighten3 : Colors.White;
-                                alternate = !alternate;
-
-                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Title).SemiBold();
-                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Description).WrapAnywhere();
-                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.IsCompleted
-                                    ? _localizer.GetString("Completed")
-                                    : _localizer.GetString("NotCompleted"));
-                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Category);
-                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Priority.ToString());
-                                table.Cell().Element(c => CellStyle(c, bgColor))
-                                    .Text(task.DueDate?.ToString("dd-MM-yyyy") ?? "");
-                            }
-
-                            static IContainer CellStyle(IContainer container, string bg)
-                            {
-                                return container
-                                    .Background(bg)
-                                    .PaddingVertical(4)
-                                    .PaddingHorizontal(4)
-                                    .AlignLeft()
-                                    .AlignMiddle();
+                                header.Cell().Element(HeaderCellStyle)
+                                    .Text(_localizer.GetString(key)).Bold().FontColor(Colors.White);
                             }
                         });
 
-                        page.Footer().AlignRight().Text(text =>
+                        // Wiersze z danymi
+                        bool alternate = false;
+                        foreach (var task in tasks)
+                        {
+                            var bgColor = alternate ? Colors.Grey.Lighten3 : Colors.White;
+                            alternate = !alternate;
+
+                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Title).SemiBold();
+                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Description)
+                                .WrapAnywhere().AlignLeft();
+                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(
+                                task.IsCompleted
+                                    ? _localizer.GetString("Completed")
+                                    : _localizer.GetString("NotCompleted"));
+                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Category);
+                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Priority.ToString());
+                            table.Cell().Element(c => CellStyle(c, bgColor))
+                                .Text(task.DueDate?.ToString("dd-MM-yyyy") ?? "");
+                        }
+                    });
+
+                    page.Footer().Row(row =>
+                    {
+                        row.RelativeColumn().AlignLeft().Text(text =>
                         {
                             text.Span(_localizer.GetString("GeneratedOn") + " ").FontSize(8);
                             text.Span(DateTime.Now.ToString("dd-MM-yyyy HH:mm")).FontSize(8).SemiBold();
                         });
+
+                        row.ConstantColumn(100).AlignRight().Text(x =>
+                        {
+                            x.CurrentPageNumber().FontSize(8);
+                            x.Span(" / ").FontSize(8);
+                            x.TotalPages().FontSize(8);
+                        });
                     });
-                })
-                .GeneratePdf(dlg.FileName);
+                });
+            }).GeneratePdf(dlg.FileName);
 
             MessageBox.Show(_localizer.GetString("ExportSuccess"));
+            IContainer HeaderCellStyle(IContainer container) =>
+                container
+                    .Background(Colors.Blue.Medium)
+                    .PaddingVertical(5)
+                    .PaddingHorizontal(4)
+                    .AlignCenter()
+                    .ShowOnce();
+
+            IContainer CellStyle(IContainer container, string bgColor) =>
+                container
+                    .Background(bgColor)
+                    .PaddingVertical(4)
+                    .PaddingHorizontal(4)
+                    .AlignLeft()
+                    .AlignMiddle();
         }
     }
 }

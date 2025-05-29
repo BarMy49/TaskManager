@@ -420,7 +420,6 @@
                 <Button Content="{DynamicResource DeleteTaskText}" Click="DeleteTask_Click" />
                 <Button Content="{DynamicResource ToggleTaskText}" Click="ToggleTaskCompletion_Click" />
                 <Button Content="{DynamicResource ListIncompleteText}" Click="ListIncompleteTasks_Click" />
-                <Button Content="{DynamicResource ListByPriorityText}" Click="ListTasksByPriority_Click" />
                 <Button Content="{DynamicResource FilterByCategoryText}" Click="FilterTasksByCategory_Click" />
                 <Button Content="{DynamicResource ExportPdfText}" Click="ExportPdf_Click" />
                 <Button Content="{DynamicResource ExitText}" Click="Exit_Click" />
