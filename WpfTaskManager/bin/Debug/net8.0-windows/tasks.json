@@ -3,7 +3,7 @@
     "Id": 1,
     "Title": "asdf",
     "Description": "asdf",
-    "IsCompleted": false,
+    "IsCompleted": true,
     "Category": "asdf",
     "Priority": "Low",
     "DueDate": "2022-09-12T00:00:00"
@@ -21,7 +21,7 @@
     "Id": 3,
     "Title": "asd",
     "Description": "asd",
-    "IsCompleted": true,
+    "IsCompleted": false,
     "Category": "asd",
     "Priority": "Medium",
     "DueDate": "2001-01-01T00:00:00"
@@ -30,7 +30,7 @@
     "Id": 4,
     "Title": "hjkl",
     "Description": "hjkl",
-    "IsCompleted": false,
+    "IsCompleted": true,
     "Category": "hjkl",
     "Priority": "Medium",
     "DueDate": "2025-03-12T00:00:00"

@@ -36,14 +36,16 @@ namespace WpfTaskManager
 
         public void RefreshColumnHeaders()
         {
-            var loc = (ResourceLocalizer)_localizer;
             // ID nie tłumaczymy
-            TasksGrid.Columns[1].Header = Application.Current.Resources["TitleText"];
-            TasksGrid.Columns[2].Header = Application.Current.Resources["DescriptionText"];
-            TasksGrid.Columns[3].Header = Application.Current.Resources["StatusText"];
-            TasksGrid.Columns[4].Header = Application.Current.Resources["CategoryText"];
-            TasksGrid.Columns[5].Header = Application.Current.Resources["PriorityText"];
-            TasksGrid.Columns[6].Header = Application.Current.Resources["DueDateText"];
+            TasksGrid.Columns[2].Header = Application.Current.Resources["TitleText"];
+            TasksGrid.Columns[3].Header = Application.Current.Resources["DescriptionText"];
+            TasksGrid.Columns[4].Header = Application.Current.Resources["StatusText"];
+            TasksGrid.Columns[5].Header = Application.Current.Resources["CategoryText"];
+            TasksGrid.Columns[6].Header = Application.Current.Resources["PriorityText"];
+            TasksGrid.Columns[7].Header = Application.Current.Resources["DueDateText"];
+            
+            TasksGrid.Items.Refresh();
+            controller.ListAllTasks();
         }
 
         public void RefreshControllerBindings()

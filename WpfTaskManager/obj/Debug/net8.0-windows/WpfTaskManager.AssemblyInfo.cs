@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WpfTaskManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+678b20d2d3a4f7fb18575ca9d44e3b6a93e59cb1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c362a019168c83ddd1919a7a489482f47f450c14")]
 [assembly: System.Reflection.AssemblyProductAttribute("WpfTaskManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WpfTaskManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

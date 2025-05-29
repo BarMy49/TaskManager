@@ -1,11 +1,10 @@
-using System;
-using System.Collections.Generic;
 using System.Resources;
 using System.Windows;
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 using WpfTaskManager;
+using WpfTaskManager.Converters;
 
 namespace TaskManager.Localization
 {
@@ -26,6 +25,12 @@ namespace TaskManager.Localization
         {
             _resourceManager = new ResourceManager("WpfTaskManager.Resources.Strings", Assembly.GetExecutingAssembly());
             SetLanguage("en"); // Domyślnie angielski
+        }
+        
+        public ResourceLocalizer(string language)
+        {
+            _resourceManager = new ResourceManager("WpfTaskManager.Resources.Strings", Assembly.GetExecutingAssembly());
+            SetLanguage(language);
         }
 
         public string GetString(string key)
@@ -53,6 +58,8 @@ namespace TaskManager.Localization
                     _currentCulture = new CultureInfo("pl-PL");
                     break;
             }
+            
+            BoolToStatusConverter.Localizer = this;
             
             // Aktualizacja zasobów aplikacji
             UpdateApplicationResources();
