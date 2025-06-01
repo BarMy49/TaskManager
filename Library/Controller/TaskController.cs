@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using TaskManager.Model;
 using TaskManager.View;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace TaskManager.Controller
 {
@@ -70,6 +71,14 @@ namespace TaskManager.Controller
                     break;
             }
         }
+        
+        private void Notification(string title, string message)
+        {
+            new ToastContentBuilder()
+                .AddText(title)
+                .AddText(message)
+                .Show();
+        }
 
         private void LaunchWindowsApp()
         {
@@ -97,8 +106,8 @@ namespace TaskManager.Controller
             {
                 var task = view.GetNewTaskDetails();
                 repository.AddTask(task);
-                view.DisplayMessage("Zadanie dodane pomyślnie.");
-
+                //view.DisplayMessage("Zadanie dodane pomyślnie.");
+                Notification($"{task.Title} DODANO POMYŚLNIE", "Zadanie zostało dodane do listy zadań.");
                 // Odświeżanie widoku - wyświetlamy wszystkie zadania
                 ListAllTasks();
             }

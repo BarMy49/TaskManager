@@ -9,6 +9,8 @@ using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using TaskManager.Localization;
 using WpfTaskManager.Themes;
+using Forms = System.Windows.Forms;
+using MessageBox = System.Windows.MessageBox;
 
 namespace WpfTaskManager
 {
@@ -19,12 +21,69 @@ namespace WpfTaskManager
         private readonly ILocalizer _localizer;
         private readonly IThemeManager _themeManager;
         private readonly HashSet<int> SelectedTasks = new HashSet<int>();
+        private NotifyIcon _trayIcon;
 
         public MainWindow(ILocalizer localizer, IThemeManager themeManager)
         {
             InitializeComponent();
             _localizer = localizer;
             _themeManager = themeManager;
+            WindowState = WindowState.Normal;
+            ShowInTaskbar = false;
+            Visibility = Visibility.Visible;
+            // Create system tray icon
+            _trayIcon = new NotifyIcon();
+            _trayIcon.Icon = new System.Drawing.Icon("WpfTaskManager.ico"); // Add .ico file to project
+            _trayIcon.Visible = true;
+            _trayIcon.Text = "Task Manager";
+
+            // Add context menu to tray icon
+            var contextMenu = new Forms.ContextMenuStrip();
+            contextMenu.Items.Add("Add Task", null, (s, e) => AddTask());
+            contextMenu.Items.Add("Exit", null, (s, e) => ExitApp());
+
+            _trayIcon.ContextMenuStrip = contextMenu;
+
+            _trayIcon.DoubleClick += (s, e) => ToggleMainWindowVisibility();
+        }
+        private void ToggleMainWindowVisibility()
+        {
+            if (this.Visibility != Visibility.Visible || this.WindowState == WindowState.Minimized)
+            {
+                ShowMainWindow();
+            }
+            else
+            {
+                HideMainWindow();
+            }
+        }
+        private void ShowMainWindow()
+        {
+            this.Show();
+            this.WindowState = WindowState.Normal;
+            this.ShowInTaskbar = false;
+            this.Visibility = Visibility.Visible;
+            this.Activate();
+        }
+        
+        private void HideMainWindow()
+        {
+            this.WindowState = WindowState.Minimized;
+            this.ShowInTaskbar = false;
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void ExitApp()
+        {
+            _trayIcon.Visible = false;
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            _trayIcon.Visible = false;
+            _trayIcon.Dispose();
+            base.OnClosed(e);
         }
 
         public void SetView(WpfView view, TaskController controller)
@@ -37,12 +96,12 @@ namespace WpfTaskManager
         public void RefreshColumnHeaders()
         {
             // ID nie tłumaczymy
-            TasksGrid.Columns[2].Header = Application.Current.Resources["TitleText"];
-            TasksGrid.Columns[3].Header = Application.Current.Resources["DescriptionText"];
-            TasksGrid.Columns[4].Header = Application.Current.Resources["StatusText"];
-            TasksGrid.Columns[5].Header = Application.Current.Resources["CategoryText"];
-            TasksGrid.Columns[6].Header = Application.Current.Resources["PriorityText"];
-            TasksGrid.Columns[7].Header = Application.Current.Resources["DueDateText"];
+            TasksGrid.Columns[2].Header = System.Windows.Application.Current.Resources["TitleText"];
+            TasksGrid.Columns[3].Header = System.Windows.Application.Current.Resources["DescriptionText"];
+            TasksGrid.Columns[4].Header = System.Windows.Application.Current.Resources["StatusText"];
+            TasksGrid.Columns[5].Header = System.Windows.Application.Current.Resources["CategoryText"];
+            TasksGrid.Columns[6].Header = System.Windows.Application.Current.Resources["PriorityText"];
+            TasksGrid.Columns[7].Header = System.Windows.Application.Current.Resources["DueDateText"];
             
             TasksGrid.Items.Refresh();
             controller.ListAllTasks();
@@ -82,8 +141,9 @@ namespace WpfTaskManager
             controller?.ListAllTasks();
         }
 
-        private void AddTask_Click(object sender, RoutedEventArgs e)
+        private void AddTask()
         {
+            ShowMainWindow();
             view.DeleteVisibility = Visibility.Collapsed;
             view.ToggleVisibility = Visibility.Collapsed;
             view.EditVisibility = Visibility.Collapsed;
@@ -96,6 +156,10 @@ namespace WpfTaskManager
             view.ClearTaskFields();
 
             view.Ignore = true;
+        }
+        private void AddTask_Click(object sender, RoutedEventArgs e)
+        {
+            AddTask();
         }
 
         private void EditTask_Click(object sender, RoutedEventArgs e)
@@ -195,7 +259,7 @@ namespace WpfTaskManager
         }
 
         // Obsługa Enter w polu "Szukaj" (u góry)
-        private void SearchBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        private void SearchBox_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -209,7 +273,7 @@ namespace WpfTaskManager
         }
 
         // ============================ USUWANIE ============================
-        private void DeleteId_PreviewKeyDown(object sender, KeyEventArgs e)
+        private void DeleteId_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -278,7 +342,7 @@ namespace WpfTaskManager
 
 
         // ============================ EDYCJA ============================
-        private void EditId_PreviewKeyDown(object sender, KeyEventArgs e)
+        private void EditId_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -323,7 +387,7 @@ namespace WpfTaskManager
 
         // ============================ FILTR KATEGORII ============================
         // Obsługa Enter w polu "CategoryFilterText"
-        private void CategoryFilterText_PreviewKeyDown(object sender, KeyEventArgs e)
+        private void CategoryFilterText_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -362,7 +426,7 @@ namespace WpfTaskManager
                 return;
             }
 
-            var dlg = new SaveFileDialog
+            var dlg = new Microsoft.Win32.SaveFileDialog
             {
                 Filter = "PDF (*.pdf)|*.pdf",
                 FileName = "Tasks.pdf"
@@ -467,13 +531,13 @@ namespace WpfTaskManager
 
         private void TaskCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox checkBox && checkBox.Tag is int id)
+            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.Tag is int id)
                 SelectedTasks.Add(id);
         }
 
         private void TaskCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox checkBox && checkBox.Tag is int id)
+            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.Tag is int id)
                 SelectedTasks.Remove(id);
         }
     }

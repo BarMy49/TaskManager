@@ -33,9 +33,9 @@ namespace TaskManager.View
         }
         
         private readonly IThemeManager _themeManager;
-        public List<string> AvailableThemes { get; } = new List<string> { "Light", "Dark" };
+        public List<string> AvailableThemes { get; } = Enum.GetNames(typeof(ThemeType)).ToList();
 
-        private string _selectedTheme = "Light";
+        private string _selectedTheme;
         public string SelectedTheme
         {
             get => _selectedTheme;
@@ -44,7 +44,11 @@ namespace TaskManager.View
                 if (_selectedTheme != value)
                 {
                     _selectedTheme = value;
-                    _themeManager.SetTheme(value == "Dark" ? ThemeType.Dark : ThemeType.Light);
+                    
+                    var theme = Enum.GetValues(typeof(ThemeType))
+                        .Cast<ThemeType>()
+                        .FirstOrDefault(t => t.ToString() == value);
+                    _themeManager.SetTheme(theme);
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedTheme)));
                 }
             }
@@ -55,9 +59,9 @@ namespace TaskManager.View
         {
             _localizer = localizer;
             _themeManager = themeManager;
-            _themeManager.SetTheme(ThemeType.Light);
+            _themeManager.SetTheme(ThemeType.Task);
             _selectedLanguage = _localizer.CurrentLanguage;
-            _selectedTheme = _themeManager.CurrentTheme == ThemeType.Dark ? "Dark" : "Light";
+            _selectedTheme = _themeManager.CurrentTheme.ToString();
         }
         
         // Odświeżanie UI po zmianie języka
@@ -248,7 +252,7 @@ namespace TaskManager.View
 
         public void DisplayMessage(string message)
         {
-            MessageBox.Show(message, "", MessageBoxButton.OK);
+            System.Windows.MessageBox.Show(message, "", MessageBoxButton.OK);
         }
 
         public void DisplayFilterMenu(string[] options, int selectedOption)

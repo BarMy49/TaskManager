@@ -67,7 +67,7 @@ namespace TaskManager.Localization
             // Powiadom o zmianie wszystkich właściwości
             OnPropertyChanged(string.Empty);
             
-            var mw = Application.Current.Windows
+            var mw = System.Windows.Application.Current.Windows
                 .OfType<MainWindow>()
                 .FirstOrDefault();
             mw?.RefreshColumnHeaders();
@@ -75,7 +75,7 @@ namespace TaskManager.Localization
         
         private void UpdateApplicationResources()
         {
-            var app = Application.Current;
+            var app = System.Windows.Application.Current;
             if (app == null) return;
     
             app.Resources["SearchText"] = GetString("Search");

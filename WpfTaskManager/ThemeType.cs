@@ -6,7 +6,10 @@ namespace WpfTaskManager.Themes
     public enum ThemeType
     {
         Light,
-        Dark
+        Dark,
+        Task,
+        Angular,
+        Funky
     }
     
     public interface IThemeManager
@@ -17,7 +20,7 @@ namespace WpfTaskManager.Themes
     
     public class ThemeManager : IThemeManager, INotifyPropertyChanged
     {
-        private ThemeType _currentTheme = ThemeType.Light;
+        private ThemeType _currentTheme = ThemeType.Task;
         
         public event PropertyChangedEventHandler PropertyChanged;
         
@@ -32,19 +35,11 @@ namespace WpfTaskManager.Themes
         
         private void ApplyTheme()
         {
-            var app = Application.Current;
+            var app = System.Windows.Application.Current;
             if (app == null) return;
             
             ResourceDictionary resourceDict = new ResourceDictionary();
-            
-            if (_currentTheme == ThemeType.Dark)
-            {
-                resourceDict.Source = new Uri("/WpfTaskManager;component/Themes/DarkTheme.xaml", UriKind.Relative);
-            }
-            else
-            {
-                resourceDict.Source = new Uri("/WpfTaskManager;component/Themes/LightTheme.xaml", UriKind.Relative);
-            }
+            resourceDict.Source = new Uri($"/WpfTaskManager;component/Themes/{_currentTheme}Theme.xaml", UriKind.Relative);
             
             app.Resources.MergedDictionaries.Clear();
             app.Resources.MergedDictionaries.Add(resourceDict);
