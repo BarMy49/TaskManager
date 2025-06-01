@@ -136,6 +136,12 @@
     <value>Exported succesfully</value>
   </data>
   <data name="TasksChanged" xml:space="preserve">
-    <value>Changed tasks:</value>
+    <value>Changed tasks with ids:</value>
+  </data>
+  <data name="TasksDeleted" xml:space="preserve">
+    <value>Deleted tasks with ids:</value>
+  </data>
+  <data name="AddWindowTitle" xml:space="preserve">
+    <value />
   </data>
 </root>

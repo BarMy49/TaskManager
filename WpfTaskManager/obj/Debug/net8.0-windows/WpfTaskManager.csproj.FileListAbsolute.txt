@@ -279,3 +279,7 @@ C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\bin\Debug\net8.0-
 C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\bin\Debug\net8.0-windows\runtimes\win-x86\native\libstdc++-6.dll
 C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
 C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
+C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\AuxiliaryWindow.g.cs
+C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\AuxiliaryWindow.baml
+C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\FilterWindow.g.cs
+C:\Users\barte\source\Repos\BarMy49\TaskManager\WpfTaskManager\obj\Debug\net8.0-windows\FilterWindow.baml

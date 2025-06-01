@@ -14,6 +14,8 @@
         string GetSearchKeyword();
         int GetTaskId();
         Model.TaskModel GetUpdatedTaskDetails(Model.TaskModel task);
+        void PopulateFields(Model.TaskModel task);
+        void UpdateCategoryFilter(List<string> categoryFilters);
         int GetUserChoice();
     }
 }

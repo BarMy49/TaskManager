@@ -36,15 +36,7 @@ namespace WpfTaskManager.Themes
             if (app == null) return;
             
             ResourceDictionary resourceDict = new ResourceDictionary();
-            
-            if (_currentTheme == ThemeType.Dark)
-            {
-                resourceDict.Source = new Uri("/WpfTaskManager;component/Themes/DarkTheme.xaml", UriKind.Relative);
-            }
-            else
-            {
-                resourceDict.Source = new Uri("/WpfTaskManager;component/Themes/LightTheme.xaml", UriKind.Relative);
-            }
+            resourceDict.Source = new Uri($"/WpfTaskManager;component/Themes/{_currentTheme}Theme.xaml", UriKind.Relative);
             
             app.Resources.MergedDictionaries.Clear();
             app.Resources.MergedDictionaries.Add(resourceDict);

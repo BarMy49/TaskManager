@@ -13,7 +13,6 @@ namespace TaskManager.View
     {
         private readonly ILocalizer _localizer;
         
-        // Dodaj tę właściwość do wyboru języka
         public List<string> AvailableLanguages { get; } = new List<string> { "pl", "en" };
         
         private string _selectedLanguage = "en";
@@ -33,9 +32,9 @@ namespace TaskManager.View
         }
         
         private readonly IThemeManager _themeManager;
-        public List<string> AvailableThemes { get; } = new List<string> { "Light", "Dark" };
+        public List<string> AvailableThemes { get; } = Enum.GetNames(typeof(ThemeType)).ToList();
 
-        private string _selectedTheme = "Light";
+        private string _selectedTheme;
         public string SelectedTheme
         {
             get => _selectedTheme;
@@ -44,7 +43,11 @@ namespace TaskManager.View
                 if (_selectedTheme != value)
                 {
                     _selectedTheme = value;
-                    _themeManager.SetTheme(value == "Dark" ? ThemeType.Dark : ThemeType.Light);
+                    
+                    var theme = Enum.GetValues(typeof(ThemeType))
+                        .Cast<ThemeType>()
+                        .FirstOrDefault(t => t.ToString() == value);
+                    _themeManager.SetTheme(theme);
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SelectedTheme)));
                 }
             }
@@ -57,7 +60,7 @@ namespace TaskManager.View
             _themeManager = themeManager;
             _themeManager.SetTheme(ThemeType.Light);
             _selectedLanguage = _localizer.CurrentLanguage;
-            _selectedTheme = _themeManager.CurrentTheme == ThemeType.Dark ? "Dark" : "Light";
+            _selectedTheme = _themeManager.CurrentTheme.ToString();
         }
         
         // Odświeżanie UI po zmianie języka
@@ -169,6 +172,8 @@ namespace TaskManager.View
         public string? Input { get; set; }
         public string? Text { get; set; }
         public List<TaskModel> Records { get; set; } = [];
+        
+        public List<string> CategoriesToFilter { get; set; } = new List<string>();
 
         private const int Width = 50;
         private ConsoleKey lastKey = ConsoleKey.UpArrow;
@@ -335,7 +340,7 @@ namespace TaskManager.View
             int.TryParse(ReadLine(), out var fallbackVal);
             return fallbackVal;
         }
-
+        
         public TaskModel GetNewTaskDetails()
         {
             Clear();
@@ -393,5 +398,16 @@ namespace TaskManager.View
                 WriteLine(line);
             }
         }
+
+        public void PopulateFields(TaskModel task)
+        {
+            Title = task.Title;
+            Description = task.Description;
+            Category = task.Category;
+            Priority = task.Priority;
+            DueDate = task.DueDate;
+        }
+
+        public void UpdateCategoryFilter(List<string> filters) => CategoriesToFilter = new List<string>(filters);
     }
 }

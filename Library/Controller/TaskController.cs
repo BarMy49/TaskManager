@@ -84,20 +84,21 @@ namespace TaskManager.Controller
 
         public void Exit()
         {
-            view.DisplayMessage("Do widzenia!");
+            // view.DisplayMessage("Do widzenia!");
             Environment.Exit(0);
         }
 
         /// <summary>
         /// Dodawanie zadania + odświeżanie widoku
         /// </summary>
+        // TODO: @BarMy
         public void AddTask()
         {
             try
             {
                 var task = view.GetNewTaskDetails();
                 repository.AddTask(task);
-                view.DisplayMessage("Zadanie dodane pomyślnie.");
+                // view.DisplayMessage("Zadanie dodane pomyślnie.");
 
                 // Odświeżanie widoku - wyświetlamy wszystkie zadania
                 ListAllTasks();
@@ -145,10 +146,10 @@ namespace TaskManager.Controller
             int id = view.GetTaskId();
             if (repository.RemoveTask(id))
             {
-                view.DisplayMessage("Zadanie usunięte pomyślnie.");
+                // view.DisplayMessage("Zadanie usunięte pomyślnie.");
 
                 // Odświeżanie
-                ListAllTasks();
+                // ListAllTasks();
             }
             else
             {
@@ -168,7 +169,7 @@ namespace TaskManager.Controller
                 task.IsCompleted = !task.IsCompleted;
                 repository.UpdateTask(task);
                 // view.DisplayMessage($"Zadanie oznaczone jako {(task.IsCompleted ? "ukończone" : "nieukończone")}.");
-
+    
                 // Odświeżanie
                 // ListAllTasks();
             }
@@ -193,7 +194,8 @@ namespace TaskManager.Controller
 
         public int GetSelectionFromFilterMenu()
         {
-            var options = new[] {
+            var options = new[]
+            {
                 "Filtrowanie według kategorii",
                 "Filtrowanie według terminu (przed datą)",
                 "Filtrowanie według terminu (po dacie)",
@@ -221,9 +223,11 @@ namespace TaskManager.Controller
                         break;
                 }
             }
+
             return selectedOption;
         }
 
+        //TODO: @BarMy dodaj
         public void FilterTasks(int option)
         {
             int filterChoice = option;
@@ -297,6 +301,18 @@ namespace TaskManager.Controller
             {
                 view.DisplayMessage($"Nie znaleziono zadania o ID = {id}");
             }
+        }
+        public void PopulateFields()
+        {
+            int id = view.GetTaskId();
+            var task = repository.GetTaskById(id);
+            view.PopulateFields(task);
+        }
+
+        public void UpdateCategoryFilters()
+        {
+            var categories = repository.GetAllTasks().Select(t => t.Category).ToList();
+            view.UpdateCategoryFilter(categories);
         }
     }
 }

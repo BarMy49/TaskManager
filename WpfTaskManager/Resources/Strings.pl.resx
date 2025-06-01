@@ -136,6 +136,9 @@
     <value>Wyeksportowano pomyślnie</value>
   </data>
   <data name="TasksChanged" xml:space="preserve">
-    <value>Zmieniono zadania:</value>
+    <value>Zmieniono zadania o id:</value>
+  </data>
+  <data name="TasksDeleted" xml:space="preserve">
+    <value>Usunięto zadania o id:</value>
   </data>
 </root>

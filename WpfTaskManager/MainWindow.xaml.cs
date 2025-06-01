@@ -32,6 +32,12 @@ namespace WpfTaskManager
             this.controller = controller;
             DataContext = this.view = view;
             controller?.ListAllTasks();
+
+            //Initial button visibility
+            AllTasksButton.Visibility = Visibility.Collapsed;
+            EditTaskButton.Visibility = Visibility.Collapsed;
+            DeleteTaskButton.Visibility = Visibility.Collapsed;
+            ToggleTaskButton.Visibility = Visibility.Collapsed;
         }
 
         public void RefreshColumnHeaders()
@@ -80,56 +86,76 @@ namespace WpfTaskManager
         {
             view.Ignore = true;
             controller?.ListAllTasks();
+            AllTasksButton.Visibility =  Visibility.Collapsed;
+            ListIncompleteButton.Visibility =  Visibility.Visible;
         }
 
         private void AddTask_Click(object sender, RoutedEventArgs e)
         {
-            view.DeleteVisibility = Visibility.Collapsed;
-            view.ToggleVisibility = Visibility.Collapsed;
-            view.EditVisibility = Visibility.Collapsed;
-            view.CategoryFilterVisibility = Visibility.Collapsed;
+            // view.DeleteVisibility = Visibility.Collapsed;
+            // view.ToggleVisibility = Visibility.Collapsed;
+            // view.EditVisibility = Visibility.Collapsed;
+            // view.CategoryFilterVisibility = Visibility.Collapsed;
+            // view.FieldsVisibility = Visibility.Visible;
+            // view.AddConfirmVisibility = Visibility.Visible;
+            // view.EditConfirmVisibility = Visibility.Collapsed;
 
-            view.FieldsVisibility = Visibility.Visible;
-            view.AddConfirmVisibility = Visibility.Visible;
-            view.EditConfirmVisibility = Visibility.Collapsed;
+            var window = new AuxiliaryWindow("A", _localizer, controller, _themeManager, view) { Owner = this };
+            window.ShowDialog();
 
             view.ClearTaskFields();
-
             view.Ignore = true;
         }
 
         private void EditTask_Click(object sender, RoutedEventArgs e)
         {
-            view.DeleteVisibility = Visibility.Collapsed;
-            view.ToggleVisibility = Visibility.Collapsed;
-            view.CategoryFilterVisibility = Visibility.Collapsed;
-
-            view.FieldsVisibility = Visibility.Visible;
-            view.AddConfirmVisibility = Visibility.Collapsed;
-            view.EditConfirmVisibility = Visibility.Visible;
-
-            view.EditVisibility = Visibility.Visible;
+            // view.DeleteVisibility = Visibility.Collapsed;
+            // view.ToggleVisibility = Visibility.Collapsed;
+            // view.CategoryFilterVisibility = Visibility.Collapsed;
+            //
+            // view.FieldsVisibility = Visibility.Visible;
+            // view.AddConfirmVisibility = Visibility.Collapsed;
+            // view.EditConfirmVisibility = Visibility.Visible;
+            //
+            // view.EditVisibility = Visibility.Visible;
             view.EditId = null;
 
-            view.ClearTaskFields();
+            var taskToEdit = view.Records
+                .Where(task => SelectedTasks.Contains(task.Id))
+                .ToList();  // ważne, ToList() tworzy nową listę kopię
 
+            if (view != null && controller != null && taskToEdit.Count == 1)
+            {
+                view.EditId = taskToEdit[0].Id.ToString();
+                
+                var window = new AuxiliaryWindow("E", _localizer, controller, _themeManager, view) { Owner = this };
+                window.ShowDialog();
+            }
+            else
+            {
+                return;
+            }
+
+            view.ClearTaskFields();
             view.Ignore = true;
         }
 
         private void DeleteTask_Click(object sender, RoutedEventArgs e)
         {
-            view.FieldsVisibility = Visibility.Collapsed;
-            view.AddConfirmVisibility = Visibility.Collapsed;
-            view.EditConfirmVisibility = Visibility.Collapsed;
-
-            view.ToggleVisibility = Visibility.Collapsed;
-            view.EditVisibility = Visibility.Collapsed;
-            view.CategoryFilterVisibility = Visibility.Collapsed;
-
-            view.DeleteVisibility = Visibility.Visible;
+            // view.FieldsVisibility = Visibility.Collapsed;
+            // view.AddConfirmVisibility = Visibility.Collapsed;
+            // view.EditConfirmVisibility = Visibility.Collapsed;
+            //
+            // view.ToggleVisibility = Visibility.Collapsed;
+            // view.EditVisibility = Visibility.Collapsed;
+            // view.CategoryFilterVisibility = Visibility.Collapsed;
+            //
+            // view.DeleteVisibility = Visibility.Visible;
             view.DeleteId = null;
 
             view.Ignore = true;
+            
+            DeleteItem();
         }
 
         private void ToggleTaskCompletion_Click(object sender, RoutedEventArgs e)
@@ -140,7 +166,6 @@ namespace WpfTaskManager
             // view.DeleteVisibility = Visibility.Collapsed;
             // view.EditVisibility = Visibility.Collapsed;
             // view.CategoryFilterVisibility = Visibility.Collapsed;
-            //
             // view.ToggleVisibility = Visibility.Visible;
             view.ToggleId = null;
 
@@ -152,24 +177,30 @@ namespace WpfTaskManager
         private void FilterTasksByCategory_Click(object sender, RoutedEventArgs e)
         {
             // Sneaky inne formularze
-            view.DeleteVisibility = Visibility.Collapsed;
-            view.ToggleVisibility = Visibility.Collapsed;
-            view.EditVisibility = Visibility.Collapsed;
-            view.FieldsVisibility = Visibility.Collapsed;
-            view.AddConfirmVisibility = Visibility.Collapsed;
-            view.EditConfirmVisibility = Visibility.Collapsed;
+            // view.DeleteVisibility = Visibility.Collapsed;
+            // view.ToggleVisibility = Visibility.Collapsed;
+            // view.EditVisibility = Visibility.Collapsed;
+            // view.FieldsVisibility = Visibility.Collapsed;
+            // view.AddConfirmVisibility = Visibility.Collapsed;
+            // view.EditConfirmVisibility = Visibility.Collapsed;
 
             // Nowy border do filtra kategorii
-            view.CategoryFilterVisibility = Visibility.Visible;
-            view.CategoryFilterText = null;
+            // view.CategoryFilterVisibility = Visibility.Visible;
+            // view.CategoryFilterText = null;
 
+            var window = new FilterWindow(_localizer, controller, _themeManager, view) { Owner = this };
+            window.ShowDialog();
+            
             view.Ignore = true;
+            AllTasksButton.Visibility = Visibility.Visible;
         }
 
         private void ListIncompleteTasks_Click(object sender, RoutedEventArgs e)
         {
             view.Ignore = true;
             controller?.ListIncompleteTasks();
+            AllTasksButton.Visibility = Visibility.Visible;
+            ListIncompleteButton.Visibility = Visibility.Collapsed;
         }
 
         private void ListTasksByPriority_Click(object sender, RoutedEventArgs e)
@@ -184,11 +215,11 @@ namespace WpfTaskManager
             controller?.SearchTasks();
         }
 
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            view.Ignore = true;
-            controller?.Exit();
-        }
+        // private void Exit_Click(object sender, RoutedEventArgs e)
+        // {
+        //     view.Ignore = true;
+        //     controller?.Exit();
+        // }
 
         private void DataGrid_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
@@ -209,28 +240,54 @@ namespace WpfTaskManager
         }
 
         // ============================ USUWANIE ============================
-        private void DeleteId_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                e.Handled = true;
-                DeleteItem();
-            }
-        }
+        // private void DeleteId_PreviewKeyDown(object sender, KeyEventArgs e)
+        // {
+        //     if (e.Key == Key.Enter)
+        //     {
+        //         e.Handled = true;
+        //         DeleteItem();
+        //     }
+        // }
 
-        private void DeleteIdButton_Click(object sender, RoutedEventArgs e)
-        {
-            DeleteItem();
-        }
+        // private void DeleteIdButton_Click(object sender, RoutedEventArgs e)
+        // {
+        //     DeleteItem();
+        // }
+
+        // private void DeleteItem()
+        // {
+        //     if (view != null && controller != null)
+        //     {
+        //         view.Ignore = true;
+        //         controller.DeleteTask();
+        //         view.DeleteVisibility = Visibility.Collapsed;
+        //         view.DeleteId = null;
+        //     }
+        // }
 
         private void DeleteItem()
         {
-            if (view != null && controller != null)
+            var tasksToDelete = view.Records
+                .Where(task => SelectedTasks.Contains(task.Id))
+                .ToList();  // ważne, ToList() tworzy nową listę kopię
+            
+            if (view != null && controller != null && tasksToDelete.Count > 0)
             {
                 view.Ignore = true;
-                controller.DeleteTask();
-                view.DeleteVisibility = Visibility.Collapsed;
+
+                if (view?.Records != null)
+                {
+                    foreach (var task in tasksToDelete)
+                    {
+                        view.DeleteId = task.Id.ToString();
+                        controller.DeleteTask();
+                    }
+                }
+                controller?.ListAllTasks();
+                SelectedTasks.Clear();
+                TasksGrid.Items.Refresh();
                 view.DeleteId = null;
+                view.DisplayMessage($"{_localizer.GetString("TasksDeleted")}: {string.Join(", ", tasksToDelete.Select(t => t.Id))}");
             }
         }
 
@@ -251,14 +308,14 @@ namespace WpfTaskManager
 
         private void ToggleCompletion()
         {
-            if (view != null && controller != null)
+            var tasksToToggle = view.Records
+                .Where(task => SelectedTasks.Contains(task.Id))
+                .ToList();  // ważne, ToList() tworzy nową listę kopię
+            
+            if (view != null && controller != null && tasksToToggle.Count > 0)
             {
                 view.Ignore = true;
                 
-                var tasksToToggle = view.Records
-                    .Where(task => SelectedTasks.Contains(task.Id))
-                    .ToList();  // ważne, ToList() tworzy nową listę kopię
-
                 if (view?.Records != null)
                 {
                     foreach (var task in tasksToToggle)
@@ -272,20 +329,20 @@ namespace WpfTaskManager
                 SelectedTasks.Clear();
                 TasksGrid.Items.Refresh();
                 view.ToggleId = null;
-                view.DisplayMessage($"{_localizer.GetString("TasksChanged")}: {string.Join(", ", tasksToToggle.Select(t => t.Id))}");
+                view.DisplayMessage($"{_localizer.GetString("TasksChanged")} {string.Join(", ", tasksToToggle.Select(t => t.Id))}");
             }
         }
 
 
         // ============================ EDYCJA ============================
-        private void EditId_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                e.Handled = true;
-                SearchById_Click(sender, e);
-            }
-        }
+        // private void EditId_PreviewKeyDown(object sender, KeyEventArgs e)
+        // {
+        //     if (e.Key == Key.Enter)
+        //     {
+        //         e.Handled = true;
+        //         SearchById_Click(sender, e);
+        //     }
+        // }
 
         private void SearchById_Click(object sender, RoutedEventArgs e)
         {
@@ -295,61 +352,61 @@ namespace WpfTaskManager
                 controller.SearchTaskById();
             }
         }
+        
+        // private void AddConfirm_Click(object sender, RoutedEventArgs e)
+        // {
+        //     if (view != null && controller != null)
+        //     {
+        //         view.Ignore = true;
+        //         controller.AddTask();
+        //
+        //         view.FieldsVisibility = Visibility.Collapsed;
+        //         view.AddConfirmVisibility = Visibility.Collapsed;
+        //     }
+        // }
 
-        private void AddConfirm_Click(object sender, RoutedEventArgs e)
-        {
-            if (view != null && controller != null)
-            {
-                view.Ignore = true;
-                controller.AddTask();
-
-                view.FieldsVisibility = Visibility.Collapsed;
-                view.AddConfirmVisibility = Visibility.Collapsed;
-            }
-        }
-
-        private void EditConfirm_Click(object sender, RoutedEventArgs e)
-        {
-            if (view != null && controller != null)
-            {
-                view.Ignore = true;
-                controller.EditTask();
-
-                view.FieldsVisibility = Visibility.Collapsed;
-                view.EditConfirmVisibility = Visibility.Collapsed;
-                view.EditVisibility = Visibility.Collapsed;
-            }
-        }
+        // private void EditConfirm_Click(object sender, RoutedEventArgs e)
+        // {
+        //     if (view != null && controller != null)
+        //     {
+        //         view.Ignore = true;
+        //         controller.EditTask();
+        //
+        //         view.FieldsVisibility = Visibility.Collapsed;
+        //         view.EditConfirmVisibility = Visibility.Collapsed;
+        //         view.EditVisibility = Visibility.Collapsed;
+        //     }
+        // }
 
         // ============================ FILTR KATEGORII ============================
         // Obsługa Enter w polu "CategoryFilterText"
-        private void CategoryFilterText_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                e.Handled = true;
-                FilterCategory();
-            }
-        }
+        // private void CategoryFilterText_PreviewKeyDown(object sender, KeyEventArgs e)
+        // {
+        //     if (e.Key == Key.Enter)
+        //     {
+        //         e.Handled = true;
+        //         FilterCategory();
+        //     }
+        // }
 
         // Obsługa kliknięcia przycisku "Szukaj"
-        private void CategoryFilterTextButton_Click(object sender, RoutedEventArgs e)
-        {
-            FilterCategory();
-        }
+        // private void CategoryFilterTextButton_Click(object sender, RoutedEventArgs e)
+        // {
+        //     FilterCategory();
+        // }
 
         // Metoda wywołująca logikę filtra w kontrolerze
-        private void FilterCategory()
-        {
-            if (view != null && controller != null)
-            {
-                view.Ignore = true;
-                controller.FilterTasks(0);
-
-                view.CategoryFilterVisibility = Visibility.Collapsed;
-                view.CategoryFilterText = null;
-            }
-        }
+        // private void FilterCategory()
+        // {
+        //     if (view != null && controller != null)
+        //     {
+        //         view.Ignore = true;
+        //         controller.FilterTasks(0);
+        //
+        //         view.CategoryFilterVisibility = Visibility.Collapsed;
+        //         view.CategoryFilterText = null;
+        //     }
+        // }
 
         // =============================== ADDED ============================
 
@@ -469,12 +526,30 @@ namespace WpfTaskManager
         {
             if (sender is CheckBox checkBox && checkBox.Tag is int id)
                 SelectedTasks.Add(id);
+            if (SelectedTasks.Count == 1)
+                EditTaskButton.Visibility = Visibility.Visible;
+            else
+                EditTaskButton.Visibility = Visibility.Collapsed;
+            if (SelectedTasks.Count > 0)
+            {
+                DeleteTaskButton.Visibility = Visibility.Visible;
+                ToggleTaskButton.Visibility = Visibility.Visible;
+            }
         }
 
         private void TaskCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
             if (sender is CheckBox checkBox && checkBox.Tag is int id)
                 SelectedTasks.Remove(id);
+            if (SelectedTasks.Count == 1)
+                EditTaskButton.Visibility = Visibility.Visible;
+            else
+                EditTaskButton.Visibility = Visibility.Collapsed;
+            if (SelectedTasks.Count < 1)
+            {
+                DeleteTaskButton.Visibility = Visibility.Collapsed;
+                ToggleTaskButton.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
