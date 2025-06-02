@@ -11,6 +11,7 @@ namespace TaskManager.Model
         List<TaskModel> GetAllTasks();
         TaskModel GetTaskById(int id);
         List<TaskModel> GetIncompleteTasks();
+        List<TaskModel> GetCompleteTasks();
         List<TaskModel> GetTasksSortedByPriority();
 
         List<TaskModel> GetTasksByCategory(string category);
@@ -89,6 +90,11 @@ namespace TaskManager.Model
         public List<TaskModel> GetIncompleteTasks()
         {
             return tasks.Where(t => !t.IsCompleted).ToList();
+        }
+        
+        public List<TaskModel> GetCompleteTasks()
+        {
+            return tasks.Where(t => t.IsCompleted).ToList();
         }
 
         public List<TaskModel> GetTasksSortedByPriority()

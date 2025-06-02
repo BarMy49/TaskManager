@@ -31,12 +31,15 @@
         <system:String x:Key="DeleteTaskText">Delete Task</system:String>
         <system:String x:Key="ToggleTaskText">Toggle Task Completion</system:String>
         <system:String x:Key="ListIncompleteText">Show Incomplete Tasks</system:String>
+        <system:String x:Key="ListCompleteText">Show Complete Tasks</system:String>
         <system:String x:Key="ListByPriorityText">Sort Tasks by Priority</system:String>
         <system:String x:Key="FilterByCategoryText">Filter by Category</system:String>
         <system:String x:Key="ExitText">Exit</system:String>
         <system:String x:Key="LanguageText">Language</system:String>
-        <system:String x:Key="ThemeText">Theme</system:String>
         <system:String x:Key="ExportPdfText">Export to PDF</system:String>
+        <system:String x:Key="FilterByText">Filter</system:String>
+        <system:String x:Key="ChooseFilter">Choose filter:</system:String>
+        <system:String x:Key="FromDate">From Date</system:String>
         
         <!-- Style -->
         <Style TargetType="TextBox">

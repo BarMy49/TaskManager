@@ -141,4 +141,16 @@
   <data name="TasksDeleted" xml:space="preserve">
     <value>Usunięto zadania o id:</value>
   </data>
+  <data name="FilterByText" xml:space="preserve">
+    <value>Filtruj</value>
+  </data>
+  <data name="ListComplete" xml:space="preserve">
+    <value>Pokaż zadania ukończone</value>
+  </data>
+  <data name="ChooseFilter" xml:space="preserve">
+    <value>Wybierz filtr:</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>Od daty</value>
+  </data>
 </root>

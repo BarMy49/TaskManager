@@ -143,6 +143,28 @@ namespace TaskManager.View
         }
         public string? EditId { get; set; }
 
+        //Filtr Date To
+        private Visibility _dateToFilterVisibility = Visibility.Collapsed;
+        public Visibility DateToFilterVisibility
+        {
+            get => _dateToFilterVisibility;
+            set
+            {
+                _dateToFilterVisibility = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(DateToFilterVisibility)));
+            }
+        }
+        //Filtr Date From
+        private Visibility _dateFromFilterVisibility = Visibility.Collapsed;
+        public Visibility DateFromFilterVisibility
+        {
+            get => _dateFromFilterVisibility;
+            set
+            {
+                _dateFromFilterVisibility = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(DateFromFilterVisibility)));
+            }
+        }
         //Filtr kategorii
         private Visibility _categoryFilterVisibility = Visibility.Collapsed;
         public Visibility CategoryFilterVisibility
@@ -155,6 +177,7 @@ namespace TaskManager.View
             }
         }
         public string? CategoryFilterText { get; set; }
+        public DateTime DateFilter { get; set; } =  DateTime.Now;
 
         // Pola do dodawania/edycji
         public bool Ignore { get; set; }
@@ -311,13 +334,18 @@ namespace TaskManager.View
 
         public DateTime GetFilterDate()
         {
-            Write(_localizer.GetString("Input_EnterDate"));
-            DateTime date;
-            while (!DateTime.TryParseExact(ReadLine(), "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out date))
-            {
-                Write(_localizer.GetString("Input_InvalidDate"));
-            }
-            return date;
+            // Write(_localizer.GetString("Input_EnterDate"));
+            // DateTime date;
+            // while (!DateTime.TryParseExact(ReadLine(), "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out date))
+            // {
+            //     Write(_localizer.GetString("Input_InvalidDate"));
+            // }
+            // return date;
+            
+            if(DateFilter != null)
+                return DateFilter;
+            else
+                return DateTime.Today;
         }
 
         public int GetTaskId()

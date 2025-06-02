@@ -88,6 +88,7 @@ namespace WpfTaskManager
             controller?.ListAllTasks();
             AllTasksButton.Visibility =  Visibility.Collapsed;
             ListIncompleteButton.Visibility =  Visibility.Visible;
+            ListIncompleteButton.Visibility =  Visibility.Visible;
         }
 
         private void AddTask_Click(object sender, RoutedEventArgs e)
@@ -174,7 +175,7 @@ namespace WpfTaskManager
             ToggleCompletion();
         }
 
-        private void FilterTasksByCategory_Click(object sender, RoutedEventArgs e)
+        private void FilterTasksBy_Click(object sender, RoutedEventArgs e)
         {
             // Sneaky inne formularze
             // view.DeleteVisibility = Visibility.Collapsed;
@@ -201,19 +202,29 @@ namespace WpfTaskManager
             controller?.ListIncompleteTasks();
             AllTasksButton.Visibility = Visibility.Visible;
             ListIncompleteButton.Visibility = Visibility.Collapsed;
+            ListCompleteButton.Visibility = Visibility.Visible;
         }
-
-        private void ListTasksByPriority_Click(object sender, RoutedEventArgs e)
+        
+        private void ListCompleteTasks_Click(object sender, RoutedEventArgs e)
         {
             view.Ignore = true;
-            controller?.ListTasksByPriority();
+            controller?.ListCompleteTasks();
+            AllTasksButton.Visibility = Visibility.Visible;
+            ListIncompleteButton.Visibility = Visibility.Visible;
+            ListCompleteButton.Visibility = Visibility.Collapsed;
         }
 
-        private void SearchTasks_Click(object sender, RoutedEventArgs e)
-        {
-            view.Ignore = true;
-            controller?.SearchTasks();
-        }
+        // private void ListTasksByPriority_Click(object sender, RoutedEventArgs e)
+        // {
+        //     view.Ignore = true;
+        //     controller?.ListTasksByPriority();
+        // }
+
+        // private void SearchTasks_Click(object sender, RoutedEventArgs e)
+        // {
+        //     view.Ignore = true;
+        //     controller?.SearchTasks();
+        // }
 
         // private void Exit_Click(object sender, RoutedEventArgs e)
         // {

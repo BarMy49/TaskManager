@@ -141,7 +141,16 @@
   <data name="TasksDeleted" xml:space="preserve">
     <value>Deleted tasks with ids:</value>
   </data>
-  <data name="AddWindowTitle" xml:space="preserve">
-    <value />
+  <data name="FilterByText" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="ListComplete" xml:space="preserve">
+    <value>Show Complete Tasks</value>
+  </data>
+  <data name="ChooseFilter" xml:space="preserve">
+    <value>Choose filter:</value>
+  </data>
+  <data name="FromDate" xml:space="preserve">
+    <value>From Date</value>
   </data>
 </root>

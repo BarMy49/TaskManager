@@ -305,9 +305,11 @@
             <StackPanel>
                 <Button Content="{DynamicResource ExportPdfText}" Click="ExportPdf_Click" />
                 <Button Content="{DynamicResource AddTaskText}" Click="AddTask_Click" />
-                <Button Content="{DynamicResource FilterByCategoryText}" Click="FilterTasksByCategory_Click" />
+                <Button Content="{DynamicResource FilterByText}" Click="FilterTasksBy_Click" />
                 <Button Name="ListIncompleteButton" Content="{DynamicResource ListIncompleteText}"
                         Click="ListIncompleteTasks_Click" />
+                <Button Name="ListCompleteButton" Content="{DynamicResource ListCompleteText}"
+                        Click="ListCompleteTasks_Click" />
                 <Button Name="AllTasksButton" Content="{DynamicResource AllTasksText}" Click="ListAllTasks_Click" />
                 <Button Name="DeleteTaskButton" Content="{DynamicResource DeleteTaskText}" Click="DeleteTask_Click" />
                 <Button Name="ToggleTaskButton" Content="{DynamicResource ToggleTaskText}"

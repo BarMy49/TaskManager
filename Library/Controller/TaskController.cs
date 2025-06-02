@@ -185,6 +185,12 @@ namespace TaskManager.Controller
             var tasks = repository.GetIncompleteTasks();
             view.DisplayTasks(tasks);
         }
+        
+        public void ListCompleteTasks()
+        {
+            var tasks = repository.GetCompleteTasks();
+            view.DisplayTasks(tasks);
+        }
 
         public void ListTasksByPriority()
         {

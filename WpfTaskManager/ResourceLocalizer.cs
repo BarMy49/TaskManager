@@ -1,10 +1,11 @@
+using System;
+using System.Collections.Generic;
 using System.Resources;
 using System.Windows;
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 using WpfTaskManager;
-using WpfTaskManager.Converters;
 
 namespace TaskManager.Localization
 {
@@ -25,12 +26,6 @@ namespace TaskManager.Localization
         {
             _resourceManager = new ResourceManager("WpfTaskManager.Resources.Strings", Assembly.GetExecutingAssembly());
             SetLanguage("en"); // Domyślnie angielski
-        }
-        
-        public ResourceLocalizer(string language)
-        {
-            _resourceManager = new ResourceManager("WpfTaskManager.Resources.Strings", Assembly.GetExecutingAssembly());
-            SetLanguage(language);
         }
 
         public string GetString(string key)
@@ -59,8 +54,6 @@ namespace TaskManager.Localization
                     break;
             }
             
-            BoolToStatusConverter.Localizer = this;
-            
             // Aktualizacja zasobów aplikacji
             UpdateApplicationResources();
             
@@ -85,7 +78,7 @@ namespace TaskManager.Localization
             app.Resources["CategoryText"] = GetString("Category");
             app.Resources["PriorityText"] = GetString("Priority");
             app.Resources["DueDateText"] = GetString("DueDate");
-            app.Resources["PriorityFieldText"] = GetString("Priority");
+            app.Resources["PriorityFieldText"] = GetString("PriorityField");
             app.Resources["DueDateFieldText"] = GetString("DueDateField");
             app.Resources["AddText"] = GetString("Add");
             app.Resources["EditText"] = GetString("Edit");
@@ -102,12 +95,16 @@ namespace TaskManager.Localization
             app.Resources["DeleteTaskText"] = GetString("DeleteTask");
             app.Resources["ToggleTaskText"] = GetString("ToggleTask");
             app.Resources["ListIncompleteText"] = GetString("ListIncomplete");
+            app.Resources["ListCompleteText"] = GetString("ListComplete");
             app.Resources["ListByPriorityText"] = GetString("ListByPriority");
             app.Resources["FilterByCategoryText"] = GetString("FilterByCategory");
+            app.Resources["FilterByText"] = GetString("FilterByText");
             app.Resources["ExitText"] = GetString("Exit");
             app.Resources["LanguageText"] = GetString("Language");
-            app.Resources["ThemeText"] = GetString("ThemeText");
             app.Resources["ExportPdfText"] = GetString("ExportPdfText");
+            app.Resources["ChooseFilter"] = GetString("ChooseFilter");
+            app.Resources["FromDate"] = GetString("FromDate");
+
         }
 
         public string CurrentLanguage => _currentCulture.TwoLetterISOLanguageName;
