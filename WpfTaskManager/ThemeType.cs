@@ -1,12 +1,16 @@
 using System.ComponentModel;
 using System.Windows;
+using Application = System.Windows.Application;
 
 namespace WpfTaskManager.Themes
 {
     public enum ThemeType
     {
         Light,
-        Dark
+        Dark,
+        Task,
+        Angular,
+        Funky
     }
     
     public interface IThemeManager
@@ -17,7 +21,7 @@ namespace WpfTaskManager.Themes
     
     public class ThemeManager : IThemeManager, INotifyPropertyChanged
     {
-        private ThemeType _currentTheme = ThemeType.Light;
+        private ThemeType _currentTheme = ThemeType.Task;
         
         public event PropertyChangedEventHandler PropertyChanged;
         

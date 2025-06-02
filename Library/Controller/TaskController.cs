@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using TaskManager.Model;
 using TaskManager.View;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace TaskManager.Controller
 {
@@ -69,6 +70,14 @@ namespace TaskManager.Controller
                     view.DisplayMessage("Nieprawidłowy wybór. Naciśnij dowolny klawisz, aby kontynuować...");
                     break;
             }
+        }
+
+        private void Notification(string title, string message)
+        {
+            new ToastContentBuilder()
+                .AddText(title)
+                .AddText(message)
+                .Show();
         }
 
         private void LaunchWindowsApp()

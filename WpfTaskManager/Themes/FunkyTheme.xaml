@@ -1,0 +1,33 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- 🕺 Background: Vibrant purple-pink neon dream -->
+    <SolidColorBrush x:Key="BackgroundBrush" Color="#FF33CC"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="#FFFF00"/> <!-- bright yellow text like it's screaming -->
+    <SolidColorBrush x:Key="AccentBrush" Color="#00FFFF"/> <!-- aqua blast from 1983 -->
+    <SolidColorBrush x:Key="BorderBrush" Color="#FF6600"/> <!-- orange like disco inferno -->
+    <SolidColorBrush x:Key="AlternateRowBrush" Color="#FF99FF"/> <!-- soft pink rows like cotton candy headache -->
+    <SolidColorBrush x:Key="HeaderBrush" Color="#9900FF"/> <!-- funky header purple -->
+    <SolidColorBrush x:Key="HeaderTextBrush" Color="#00FF99"/> <!-- minty fresh madness -->
+
+    <!-- 🕹️ Interactions -->
+    <SolidColorBrush x:Key="HoverBrush" Color="#00FFCC"/> <!-- you hover? welcome to miami -->
+    <SolidColorBrush x:Key="HoverBorderBrush" Color="#FF00FF"/> <!-- pink slap when you hover -->
+    <SolidColorBrush x:Key="TitleTextBrush" Color="#FFFFFF"/> <!-- white text because we need at least *one* readable thing -->
+
+    <!-- 🧃 Textbox -->
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="#330033"/> <!-- dark purple textboxes like midnight grapes -->
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="#FF00FF"/>
+    <SolidColorBrush x:Key="TextBoxForegroundBrush" Color="#00FF00"/> <!-- lime green insanity -->
+
+    <!-- 🎛️ ComboBox -->
+    <SolidColorBrush x:Key="ComboBoxBackgroundBrush" Color="#1A0033"/>
+    <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="#FF6600"/>
+
+    <!-- 📅 DatePicker -->
+    <SolidColorBrush x:Key="DatePickerBackgroundBrush" Color="#000066"/> <!-- space blue datepicker -->
+    <SolidColorBrush x:Key="DatePickerBorderBrush" Color="#FF00CC"/>
+
+    <!-- 🧭 Menu -->
+    <SolidColorBrush x:Key="MenuBackgroundBrush" Color="#4B0082"/> <!-- indigo like a funky wizard’s robe -->
+
+</ResourceDictionary>

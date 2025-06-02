@@ -6,6 +6,7 @@ using TaskManager.Localization;
 using TaskManager.Model;
 using WpfTaskManager;
 using WpfTaskManager.Themes;
+using MessageBox = System.Windows.MessageBox;
 
 namespace TaskManager.View
 {
@@ -58,7 +59,7 @@ namespace TaskManager.View
         {
             _localizer = localizer;
             _themeManager = themeManager;
-            _themeManager.SetTheme(ThemeType.Light);
+            _themeManager.SetTheme(ThemeType.Task);
             _selectedLanguage = _localizer.CurrentLanguage;
             _selectedTheme = _themeManager.CurrentTheme.ToString();
         }

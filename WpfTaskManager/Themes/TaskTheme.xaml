@@ -1,0 +1,32 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Kolory podstawowe dla motywu klasycznego-->
+    <SolidColorBrush x:Key="BackgroundBrush" Color="Gray"/>
+    <SolidColorBrush x:Key="ForegroundBrush" Color="Black"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="SandyBrown"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="SaddleBrown"/>
+    <SolidColorBrush x:Key="AlternateRowBrush" Color="DimGray"/>
+    <SolidColorBrush x:Key="HeaderBrush" Color="SandyBrown"/>
+    <SolidColorBrush x:Key="HeaderTextBrush" Color="Black"/>
+    
+    <!-- Kolory przycisków i interakcji -->
+    <SolidColorBrush x:Key="HoverBrush" Color="Gold"/>
+    <SolidColorBrush x:Key="HoverBorderBrush" Color="DarkGoldenrod"/>
+    <SolidColorBrush x:Key="TitleTextBrush" Color="SaddleBrown"/>
+    
+    <!-- Kolory formularzy -->
+    <SolidColorBrush x:Key="TextBoxBackgroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="TextBoxBorderBrush" Color="SandyBrown"/>
+    <SolidColorBrush x:Key="TextBoxForegroundBrush" Color="Black"/>
+    
+    <!-- Kolory ComboBox -->
+    <SolidColorBrush x:Key="ComboBoxBackgroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="ComboBoxBorderBrush" Color="SaddleBrown"/>
+    
+    <!-- Kolory DatePicker -->
+    <SolidColorBrush x:Key="DatePickerBackgroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="DatePickerBorderBrush" Color="SaddleBrown"/>
+    
+    <!-- Kolory menu i nawigacji -->
+    <SolidColorBrush x:Key="MenuBackgroundBrush" Color="#e8e8e8"/>
+</ResourceDictionary>

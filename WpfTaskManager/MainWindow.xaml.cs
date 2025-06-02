@@ -9,6 +9,12 @@ using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using TaskManager.Localization;
 using WpfTaskManager.Themes;
+using Forms = System.Windows.Forms;
+using Application = System.Windows.Application;
+using MessageBox = System.Windows.MessageBox;
+using KeyEventArgs = System.Windows.Input.KeyEventArgs;
+using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
+using CheckBox =  System.Windows.Controls.CheckBox;
 
 namespace WpfTaskManager
 {
@@ -19,12 +25,69 @@ namespace WpfTaskManager
         private readonly ILocalizer _localizer;
         private readonly IThemeManager _themeManager;
         private readonly HashSet<int> SelectedTasks = new HashSet<int>();
+        private NotifyIcon _trayIcon;
 
         public MainWindow(ILocalizer localizer, IThemeManager themeManager)
         {
             InitializeComponent();
             _localizer = localizer;
             _themeManager = themeManager;
+            WindowState = WindowState.Normal;
+            ShowInTaskbar = false;
+            Visibility = Visibility.Visible;
+            // Create system tray icon
+            _trayIcon = new NotifyIcon();
+            _trayIcon.Icon = new System.Drawing.Icon("WpfTaskManager.ico"); // Add .ico file to project
+            _trayIcon.Visible = true;
+            _trayIcon.Text = "Task Manager";
+
+            // Add context menu to tray icon
+            var contextMenu = new System.Windows.Forms.ContextMenuStrip();
+            contextMenu.Items.Add("Add Task", null, (s, e) => AddTask());
+            contextMenu.Items.Add("Exit", null, (s, e) => ExitApp());
+
+            _trayIcon.ContextMenuStrip = contextMenu;
+
+            _trayIcon.DoubleClick += (s, e) => ToggleMainWindowVisibility();
+        }
+        private void ToggleMainWindowVisibility()
+        {
+            if (this.Visibility != Visibility.Visible || this.WindowState == WindowState.Minimized)
+            {
+                ShowMainWindow();
+            }
+            else
+            {
+                HideMainWindow();
+            }
+        }
+        private void ShowMainWindow()
+        {
+            this.Show();
+            this.WindowState = WindowState.Normal;
+            this.ShowInTaskbar = false;
+            this.Visibility = Visibility.Visible;
+            this.Activate();
+        }
+        
+        private void HideMainWindow()
+        {
+            this.WindowState = WindowState.Minimized;
+            this.ShowInTaskbar = false;
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void ExitApp()
+        {
+            _trayIcon.Visible = false;
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            _trayIcon.Visible = false;
+            _trayIcon.Dispose();
+            base.OnClosed(e);
         }
 
         public void SetView(WpfView view, TaskController controller)
@@ -101,6 +164,11 @@ namespace WpfTaskManager
             // view.AddConfirmVisibility = Visibility.Visible;
             // view.EditConfirmVisibility = Visibility.Collapsed;
 
+            AddTask();
+        }
+
+        private void AddTask()
+        {
             var window = new AuxiliaryWindow("A", _localizer, controller, _themeManager, view) { Owner = this };
             window.ShowDialog();
 

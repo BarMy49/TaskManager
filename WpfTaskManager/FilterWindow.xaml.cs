@@ -4,6 +4,7 @@ using TaskManager.Controller;
 using TaskManager.Localization;
 using TaskManager.View;
 using WpfTaskManager.Themes;
+using ComboBox =  System.Windows.Controls.ComboBox;
 
 namespace WpfTaskManager;
 

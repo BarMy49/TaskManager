@@ -4,6 +4,7 @@ using TaskManager.Localization;
 using TaskManager.Model;
 using TaskManager.View;
 using WpfTaskManager.Themes;
+using Application = System.Windows.Application;
 
 namespace WpfTaskManager;
 

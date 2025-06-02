@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
 using System.Resources;
-using System.Windows;
 using System.ComponentModel;
 using System.Globalization;
 using System.Reflection;
 using WpfTaskManager;
+using Application = System.Windows.Application;
 
 namespace TaskManager.Localization
 {
