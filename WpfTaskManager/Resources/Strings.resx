@@ -153,4 +153,10 @@
   <data name="FromDate" xml:space="preserve">
     <value>From Date</value>
   </data>
+  <data name="EditSuccess" xml:space="preserve">
+    <value>Succesfully edited tasks with ids:</value>
+  </data>
+  <data name="AddSuccess" xml:space="preserve">
+    <value>Successfully added a task.</value>
+  </data>
 </root>

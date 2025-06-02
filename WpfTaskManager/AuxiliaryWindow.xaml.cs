@@ -47,6 +47,7 @@ public partial class AuxiliaryWindow : Window
             _view.Ignore = true;
             _controller.AddTask();
         }
+        _controller.Notification($"{_localizer.GetString("AddSuccess")}", "");
         _view.ClearTaskFields();
     }
 
@@ -57,6 +58,7 @@ public partial class AuxiliaryWindow : Window
             _view.Ignore = true;
             _controller.EditTask();
         }
+        _controller.Notification($"{_localizer.GetString("EditSuccess")}{_view.EditId}.", "");
         this.Close();
     }
 }

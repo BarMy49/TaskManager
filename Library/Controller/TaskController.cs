@@ -72,7 +72,7 @@ namespace TaskManager.Controller
             }
         }
 
-        private void Notification(string title, string message)
+        public void Notification(string title, string message)
         {
             new ToastContentBuilder()
                 .AddText(title)
@@ -131,7 +131,6 @@ namespace TaskManager.Controller
                 {
                     var updatedTask = view.GetUpdatedTaskDetails(task);
                     repository.UpdateTask(updatedTask);
-                    view.DisplayMessage("Zadanie zaktualizowane pomyślnie.");
 
                     // Odświeżanie
                     ListAllTasks();

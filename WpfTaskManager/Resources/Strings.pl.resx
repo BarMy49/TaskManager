@@ -153,4 +153,10 @@
   <data name="FromDate" xml:space="preserve">
     <value>Od daty</value>
   </data>
+  <data name="EditSuccess" xml:space="preserve">
+    <value>Pomyślnie edytowano zadania z id:</value>
+  </data>
+  <data name="AddSuccess" xml:space="preserve">
+    <value>Pomyślnie dodano zadanie.</value>
+  </data>
 </root>

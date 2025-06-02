@@ -366,7 +366,7 @@ namespace WpfTaskManager
                 SelectedTasks.Clear();
                 TasksGrid.Items.Refresh();
                 view.DeleteId = null;
-                view.DisplayMessage($"{_localizer.GetString("TasksDeleted")}: {string.Join(", ", tasksToDelete.Select(t => t.Id))}");
+                controller.Notification($"{_localizer.GetString("TasksDeleted")}: {string.Join(", ", tasksToDelete.Select(t => t.Id))}", "");
             }
         }
 
@@ -408,7 +408,7 @@ namespace WpfTaskManager
                 SelectedTasks.Clear();
                 TasksGrid.Items.Refresh();
                 view.ToggleId = null;
-                view.DisplayMessage($"{_localizer.GetString("TasksChanged")} {string.Join(", ", tasksToToggle.Select(t => t.Id))}");
+                controller.Notification($"{_localizer.GetString("TasksChanged")} {string.Join(", ", tasksToToggle.Select(t => t.Id))}", "");
             }
         }
 
