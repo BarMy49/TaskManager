@@ -63,4 +63,10 @@
     <PackageReference Include="SharpVectors.Wpf" Version="1.8.4.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="bin\Debug\net8.0-windows10.0.19041.0\tasks.json" />
+    <Content Include="bin\Debug\net8.0-windows10.0.19041.0\WpfTaskManager.ico" />
+    <Content Include="bin\Debug\net8.0-windows10.0.19041.0\WpfTaskManager.svg" />
+  </ItemGroup>
+
 </Project>
