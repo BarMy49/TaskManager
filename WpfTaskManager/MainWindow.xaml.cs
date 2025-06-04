@@ -14,7 +14,7 @@ using Application = System.Windows.Application;
 using MessageBox = System.Windows.MessageBox;
 using KeyEventArgs = System.Windows.Input.KeyEventArgs;
 using SaveFileDialog = Microsoft.Win32.SaveFileDialog;
-using CheckBox =  System.Windows.Controls.CheckBox;
+using CheckBox = System.Windows.Controls.CheckBox;
 
 namespace WpfTaskManager
 {
@@ -25,7 +25,7 @@ namespace WpfTaskManager
         private readonly ILocalizer _localizer;
         private readonly IThemeManager _themeManager;
         private readonly HashSet<int> SelectedTasks = new HashSet<int>();
-        private NotifyIcon _trayIcon;
+        private readonly NotifyIcon _trayIcon;
 
         public MainWindow(ILocalizer localizer, IThemeManager themeManager)
         {
@@ -50,6 +50,7 @@ namespace WpfTaskManager
 
             _trayIcon.DoubleClick += (s, e) => ToggleMainWindowVisibility();
         }
+
         private void ToggleMainWindowVisibility()
         {
             if (this.Visibility != Visibility.Visible || this.WindowState == WindowState.Minimized)
@@ -61,6 +62,7 @@ namespace WpfTaskManager
                 HideMainWindow();
             }
         }
+
         private void ShowMainWindow()
         {
             this.Show();
@@ -69,7 +71,7 @@ namespace WpfTaskManager
             this.Visibility = Visibility.Visible;
             this.Activate();
         }
-        
+
         private void HideMainWindow()
         {
             this.WindowState = WindowState.Minimized;
@@ -112,7 +114,7 @@ namespace WpfTaskManager
             TasksGrid.Columns[5].Header = Application.Current.Resources["CategoryText"];
             TasksGrid.Columns[6].Header = Application.Current.Resources["PriorityText"];
             TasksGrid.Columns[7].Header = Application.Current.Resources["DueDateText"];
-            
+
             TasksGrid.Items.Refresh();
             controller.ListAllTasks();
         }
@@ -149,9 +151,9 @@ namespace WpfTaskManager
         {
             view.Ignore = true;
             controller?.ListAllTasks();
-            AllTasksButton.Visibility =  Visibility.Collapsed;
-            ListIncompleteButton.Visibility =  Visibility.Visible;
-            ListIncompleteButton.Visibility =  Visibility.Visible;
+            AllTasksButton.Visibility = Visibility.Collapsed;
+            ListIncompleteButton.Visibility = Visibility.Visible;
+            ListIncompleteButton.Visibility = Visibility.Visible;
         }
 
         private void AddTask_Click(object sender, RoutedEventArgs e)
@@ -191,12 +193,12 @@ namespace WpfTaskManager
 
             var taskToEdit = view.Records
                 .Where(task => SelectedTasks.Contains(task.Id))
-                .ToList();  // ważne, ToList() tworzy nową listę kopię
+                .ToList(); // ważne, ToList() tworzy nową listę kopię
 
             if (view != null && controller != null && taskToEdit.Count == 1)
             {
                 view.EditId = taskToEdit[0].Id.ToString();
-                
+
                 var window = new AuxiliaryWindow("E", _localizer, controller, _themeManager, view) { Owner = this };
                 window.ShowDialog();
             }
@@ -223,7 +225,7 @@ namespace WpfTaskManager
             view.DeleteId = null;
 
             view.Ignore = true;
-            
+
             DeleteItem();
         }
 
@@ -239,7 +241,7 @@ namespace WpfTaskManager
             view.ToggleId = null;
 
             view.Ignore = true;
-            
+
             ToggleCompletion();
         }
 
@@ -259,7 +261,7 @@ namespace WpfTaskManager
 
             var window = new FilterWindow(_localizer, controller, _themeManager, view) { Owner = this };
             window.ShowDialog();
-            
+
             view.Ignore = true;
             AllTasksButton.Visibility = Visibility.Visible;
         }
@@ -272,7 +274,7 @@ namespace WpfTaskManager
             ListIncompleteButton.Visibility = Visibility.Collapsed;
             ListCompleteButton.Visibility = Visibility.Visible;
         }
-        
+
         private void ListCompleteTasks_Click(object sender, RoutedEventArgs e)
         {
             view.Ignore = true;
@@ -348,8 +350,8 @@ namespace WpfTaskManager
         {
             var tasksToDelete = view.Records
                 .Where(task => SelectedTasks.Contains(task.Id))
-                .ToList();  // ważne, ToList() tworzy nową listę kopię
-            
+                .ToList(); // ważne, ToList() tworzy nową listę kopię
+
             if (view != null && controller != null && tasksToDelete.Count > 0)
             {
                 view.Ignore = true;
@@ -362,11 +364,14 @@ namespace WpfTaskManager
                         controller.DeleteTask();
                     }
                 }
+
                 controller?.ListAllTasks();
                 SelectedTasks.Clear();
                 TasksGrid.Items.Refresh();
                 view.DeleteId = null;
-                controller.Notification($"{_localizer.GetString("TasksDeleted")}: {string.Join(", ", tasksToDelete.Select(t => t.Id))}", "");
+                controller.Notification(
+                    $"{_localizer.GetString("TasksDeleted")}: {string.Join(", ", tasksToDelete.Select(t => t.Id))}",
+                    "");
             }
         }
 
@@ -389,12 +394,12 @@ namespace WpfTaskManager
         {
             var tasksToToggle = view.Records
                 .Where(task => SelectedTasks.Contains(task.Id))
-                .ToList();  // ważne, ToList() tworzy nową listę kopię
-            
+                .ToList(); // ważne, ToList() tworzy nową listę kopię
+
             if (view != null && controller != null && tasksToToggle.Count > 0)
             {
                 view.Ignore = true;
-                
+
                 if (view?.Records != null)
                 {
                     foreach (var task in tasksToToggle)
@@ -403,12 +408,14 @@ namespace WpfTaskManager
                         controller.ToggleTaskCompletion();
                     }
                 }
+
                 controller?.ListAllTasks();
                 // view.ToggleVisibility = Visibility.Collapsed;
                 SelectedTasks.Clear();
                 TasksGrid.Items.Refresh();
                 view.ToggleId = null;
-                controller.Notification($"{_localizer.GetString("TasksChanged")} {string.Join(", ", tasksToToggle.Select(t => t.Id))}", "");
+                controller.Notification(
+                    $"{_localizer.GetString("TasksChanged")} {string.Join(", ", tasksToToggle.Select(t => t.Id))}", "");
             }
         }
 
@@ -431,7 +438,7 @@ namespace WpfTaskManager
                 controller.SearchTaskById();
             }
         }
-        
+
         // private void AddConfirm_Click(object sender, RoutedEventArgs e)
         // {
         //     if (view != null && controller != null)
@@ -491,98 +498,103 @@ namespace WpfTaskManager
 
         private void ExportPdf_Click(object sender, RoutedEventArgs e)
         {
-            var tasks = view?.Records;
-            if (tasks == null || tasks.Count == 0)
+            // Uruchom eksport PDF jako zadanie w tle, aby nie blokować UI
+            Task.Run(() =>
             {
-                MessageBox.Show(_localizer.GetString("NoTasksToExport"));
-                return;
-            }
-
-            var dlg = new SaveFileDialog
-            {
-                Filter = "PDF (*.pdf)|*.pdf",
-                FileName = "Tasks.pdf"
-            };
-            if (dlg.ShowDialog() != true) return;
-
-            var columnKeys = new[] { "Title", "Description", "Status", "Category", "Priority", "DueDate" };
-
-            Document.Create(container =>
-            {
-                container.Page(page =>
+                var tasks = view?.Records;
+                if (tasks == null || tasks.Count == 0)
                 {
-                    page.Margin(40);
-                    page.Size(PageSizes.A4);
-                    page.PageColor(Colors.White);
-                    page.DefaultTextStyle(x => x.FontSize(10).FontFamily("Arial"));
+                    MessageBox.Show(_localizer.GetString("NoTasksToExport"));
+                    return;
+                }
 
-                    page.Header()
-                        .Text(_localizer.GetString("TaskList"))
-                        .SemiBold().FontSize(18).FontColor(Colors.Blue.Darken2).AlignCenter();
+                var dlg = new SaveFileDialog
+                {
+                    Filter = "PDF (*.pdf)|*.pdf",
+                    FileName = "Tasks.pdf"
+                };
+                if (dlg.ShowDialog() != true) return;
 
-                    page.Content().Table(table =>
+                var columnKeys = new[] { "Title", "Description", "Status", "Category", "Priority", "DueDate" };
+                
+                Document.Create(container =>
+                {
+                    container.Page(page =>
                     {
-                        // Kolumny: proporcje
-                        table.ColumnsDefinition(columns =>
-                        {
-                            columns.RelativeColumn(1.2f); // Title
-                            columns.RelativeColumn(2f); // Description
-                            columns.RelativeColumn(); // Status
-                            columns.RelativeColumn(); // Category
-                            columns.RelativeColumn(); // Priority
-                            columns.RelativeColumn(); // DueDate
-                        });
+                        page.Margin(40);
+                        page.Size(PageSizes.A4);
+                        page.PageColor(Colors.White);
+                        page.DefaultTextStyle(x => x.FontSize(10).FontFamily("Arial"));
 
-                        // Nagłówki
-                        table.Header(header =>
+                        page.Header()
+                            .Text(_localizer.GetString("TaskList"))
+                            .SemiBold().FontSize(18).FontColor(Colors.Blue.Darken2).AlignCenter();
+
+                        page.Content().Table(table =>
                         {
-                            foreach (var key in columnKeys)
+                            // Kolumny: proporcje
+                            table.ColumnsDefinition(columns =>
                             {
-                                header.Cell().Element(HeaderCellStyle)
-                                    .Text(_localizer.GetString(key)).Bold().FontColor(Colors.White);
+                                columns.RelativeColumn(1.2f); // Title
+                                columns.RelativeColumn(2f); // Description
+                                columns.RelativeColumn(); // Status
+                                columns.RelativeColumn(); // Category
+                                columns.RelativeColumn(); // Priority
+                                columns.RelativeColumn(); // DueDate
+                            });
+
+                            // Nagłówki
+                            table.Header(header =>
+                            {
+                                foreach (var key in columnKeys)
+                                {
+                                    header.Cell().Element(HeaderCellStyle)
+                                        .Text(_localizer.GetString(key)).Bold().FontColor(Colors.White);
+                                }
+                            });
+
+                            // Wiersze z danymi
+                            bool alternate = false;
+                            foreach (var task in tasks)
+                            {
+                                var bgColor = alternate ? Colors.Grey.Lighten3 : Colors.White;
+                                alternate = !alternate;
+
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Title).SemiBold();
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Description)
+                                    .WrapAnywhere().AlignLeft();
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(
+                                    task.IsCompleted
+                                        ? _localizer.GetString("Completed")
+                                        : _localizer.GetString("NotCompleted"));
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Category);
+                                table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Priority.ToString());
+                                table.Cell().Element(c => CellStyle(c, bgColor))
+                                    .Text(task.DueDate?.ToString("dd-MM-yyyy") ?? "");
                             }
                         });
 
-                        // Wiersze z danymi
-                        bool alternate = false;
-                        foreach (var task in tasks)
+                        page.Footer().Row(row =>
                         {
-                            var bgColor = alternate ? Colors.Grey.Lighten3 : Colors.White;
-                            alternate = !alternate;
+                            row.RelativeColumn().AlignLeft().Text(text =>
+                            {
+                                text.Span(_localizer.GetString("GeneratedOn") + " ").FontSize(8);
+                                text.Span(DateTime.Now.ToString("dd-MM-yyyy HH:mm")).FontSize(8).SemiBold();
+                            });
 
-                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Title).SemiBold();
-                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Description)
-                                .WrapAnywhere().AlignLeft();
-                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(
-                                task.IsCompleted
-                                    ? _localizer.GetString("Completed")
-                                    : _localizer.GetString("NotCompleted"));
-                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Category);
-                            table.Cell().Element(c => CellStyle(c, bgColor)).Text(task.Priority.ToString());
-                            table.Cell().Element(c => CellStyle(c, bgColor))
-                                .Text(task.DueDate?.ToString("dd-MM-yyyy") ?? "");
-                        }
-                    });
-
-                    page.Footer().Row(row =>
-                    {
-                        row.RelativeColumn().AlignLeft().Text(text =>
-                        {
-                            text.Span(_localizer.GetString("GeneratedOn") + " ").FontSize(8);
-                            text.Span(DateTime.Now.ToString("dd-MM-yyyy HH:mm")).FontSize(8).SemiBold();
-                        });
-
-                        row.ConstantColumn(100).AlignRight().Text(x =>
-                        {
-                            x.CurrentPageNumber().FontSize(8);
-                            x.Span(" / ").FontSize(8);
-                            x.TotalPages().FontSize(8);
+                            row.ConstantColumn(100).AlignRight().Text(x =>
+                            {
+                                x.CurrentPageNumber().FontSize(8);
+                                x.Span(" / ").FontSize(8);
+                                x.TotalPages().FontSize(8);
+                            });
                         });
                     });
-                });
-            }).GeneratePdf(dlg.FileName);
+                }).GeneratePdf(dlg.FileName);
 
-            MessageBox.Show(_localizer.GetString("ExportSuccess"));
+                // Powiadomienie po zakończeniu eksportu (na wątku UI)
+                Dispatcher.Invoke(() => { controller.Notification(_localizer.GetString("ExportSuccess"), ""); });
+            });
 
             IContainer HeaderCellStyle(IContainer container) =>
                 container
